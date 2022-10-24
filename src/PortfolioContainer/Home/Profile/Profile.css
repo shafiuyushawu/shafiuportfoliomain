@@ -5,7 +5,7 @@
     justify-content: center;
     height: 10%;
     min-height: fit-content;
-    background-image: url('../../assets/Home/bg.jpg');
+  
 }
 .profile-parent{
     display: flex;
@@ -58,7 +58,7 @@
 .profile-picture-background{
     height: 92%;
     width: 92%;
-    background-image: url('../../assets//Home/shafiu.jpg');
+    background-image: url('../../../assets/Home/shafiu.jpg');
     background-size: cover;
     border-radius: 50%;
     background-repeat: no-repeat;
