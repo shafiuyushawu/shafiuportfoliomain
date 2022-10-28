@@ -112,12 +112,12 @@ const ContactMe = (props  ) => {
           <input type="email" name='email' onChange={ handleEmail } value={ email }/>
 
           <label htmlFor="message">Message</label>
-          <textarea type='text' name="message" id="message" cols="30" rows="10" onChange={ handleMessage } value={ message } />
+          <textarea type='text' name="message" id="message" cols="30" rows="5" onChange={ handleMessage } value={ message } />
 
           <div className="send-btn">
             <button type='submit'>
                Send 
-               <i className='fa fa-paper-plane'/ > 
+               <i className='fa fa-paper-plane' /> 
                { bool ? <b className='load'>
                 <img src={ load1 } alt="Image not responding" />
                </b> : ''}
