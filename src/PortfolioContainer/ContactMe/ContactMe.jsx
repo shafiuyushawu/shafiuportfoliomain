@@ -6,6 +6,7 @@ import load1 from '../../../src/images/load2.gif'
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading'
 import ScrollService from '../../utilities/ScrollService'
 import Animations from '../../utilities/Animations'
+import './ContactMe.css'
 
 
 const ContactMe = (props  ) => {
