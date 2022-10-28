@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Typewriter from 'typewriter-effect'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 import imgBack from '../../../src/images/mailz.jpeg'
 import load1 from '../../../src/images/load2.gif'
@@ -21,7 +23,7 @@ const ContactMe = (props  ) => {
   const [ email, setEmail ] = useState('')
   const [ message, setMessage ] = useState('')
   const [ banner, setBanner ] = useState('')
-  const [ bool, setBol ] = useState(false)
+  const [ bool, setBool ] = useState(false)
 
 
   const handleName = ( e ) => {
@@ -33,7 +35,37 @@ const ContactMe = (props  ) => {
   const handleMessage = ( e ) => {
     setMessage( e.target.value )
   }
-  console.log(name)
+
+  const submitForm = async( e ) => {
+    e.preventDefault()
+    try{
+      let data = {
+        name,
+        email,
+        message
+      }
+
+      setBool(true)
+      const res = await axios.post(`/contact`, data)
+
+      if( name.length === 0 || email.length ===0 || message.length === 0 ) {
+        setBanner(res.data.msg)
+        toast.error(res.data.msg)
+        setBool( false )
+      }
+      else if (res.status == 200){
+        setBanner(res.data.msg)
+        toast.success(res.data.msg)
+        setBool( false )
+      }
+    }
+    catch (error){
+      console.log(error)
+    }
+      
+ 
+  }
+
   return (
     <div className="main-container" id={props.id || ""}>
       <ScreenHeading title={"Contact Me"} subHeading={"Let's Keep In Touch"} />
@@ -71,7 +103,7 @@ const ContactMe = (props  ) => {
           </div>
         </div>
 
-        <form action="">
+        <form action="" onSubmit={ submitForm }>
           <p>{ banner }</p>
           <label htmlFor="name">Name</label>
           <input type="text" name='name' onChange={ handleName } value={ name }  />
@@ -83,7 +115,13 @@ const ContactMe = (props  ) => {
           <textarea type='text' name="message" id="message" cols="30" rows="10" onChange={ handleMessage } value={ message } />
 
           <div className="send-btn">
-            <button type='submit'> Send <i className='fa fa-paper-plane'/></button>
+            <button type='submit'>
+               Send 
+               <i className='fa fa-paper-plane'/ > 
+               { bool ? <b className='load'>
+                <img src={ load1 } alt="Image not responding" />
+               </b> : ''}
+            </button>
           </div>
         </form>
       </div>

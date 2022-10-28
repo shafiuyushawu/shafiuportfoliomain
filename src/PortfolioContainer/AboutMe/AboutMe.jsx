@@ -7,8 +7,8 @@ import './AboutMe.css'
 const AboutMe = ( props ) => {
 
     let fadeInScreenHandler = ( screen ) => {
-        if( screen.fadeScreen !== props.id ) return
-        Animations.animations.fadeInScreen( props.id )
+        if( screen.fadeInScreen !== props.id ) return
+        Animations.animations.fadeInScreen(props.id)
     }
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe( fadeInScreenHandler )
 
@@ -51,7 +51,7 @@ const AboutMe = ( props ) => {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button className="btn primary-btn">
+              <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
                 {" "}
                 Hire Me{" "}
               </button>

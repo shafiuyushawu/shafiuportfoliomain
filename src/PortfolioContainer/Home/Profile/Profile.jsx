@@ -1,5 +1,7 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
+import ScrollService from '../../../utilities/ScrollService'
+import Animations from '../../../utilities/Animations'
 import './Profile.css'
 
 const Profile = () => {
@@ -60,7 +62,7 @@ const Profile = () => {
                 </div>
 
                 <div className="profile-options">
-                    <button className='btn primary-btn'>
+                    <button className='btn primary-btn' onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
                         { '' }
                         Hire Me { '' }
                     </button>
