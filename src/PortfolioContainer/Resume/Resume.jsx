@@ -36,6 +36,12 @@ const Resume = ( props ) => {
             <div className="resume-heading-description">
               <span>{props.description ? props.description : ""}</span>
             </div>
+            <div className="resume-heading-description">
+              <span>{props.description1 ? props.description1 : ""}</span>
+            </div>
+            <div className="resume-heading-description">
+              <a href={props.link}>{props.live ? props.live : ""}</a>
+            </div>
           </div>
         );
       };
@@ -50,40 +56,46 @@ const Resume = ( props ) => {
       ];
 
       const programmingSkillsDetails = [
-        { skill: "JavaScript", ratingPercentage: 85 },
-        { skill: "React JS", ratingPercentage: 85 },
-        { skill: "React Native", ratingPercentage: 85 },
-        { skill: "Express JS", ratingPercentage: 89 },
-        { skill: "Node JS", ratingPercentage: 89 },
-        { skill: "Mongo Db", ratingPercentage: 70 },
-        { skill: "Core Java", ratingPercentage: 80 },
-        { skill: "HTML", ratingPercentage: 80 },
-        { skill: "CSS", ratingPercentage: 80 },
+        { skill: "JavaScript", ratingPercentage: 90 },
+        { skill: "React JS", ratingPercentage: 90 },
+        { skill: "React Native", ratingPercentage: 65 },
+        { skill: "Express JS", ratingPercentage: 40 },
+        { skill: "Node JS", ratingPercentage: 30 },
+        { skill: "Mongo Db", ratingPercentage: 20 },
+        { skill: "Tailwind CSS & Daisy UI", ratingPercentage: 95 },
+        { skill: "HTML", ratingPercentage: 97 },
+        { skill: "CSS", ratingPercentage: 95 },
       ];
 
       const projectsDetails = [
         {
-          title: "Personal Portfolio Website",
-          duration: { fromDate: "2020", toDate: "2021" },
+          title: "Weather",
+          duration: { fromDate: "Apr. 2023", toDate: "Apr. 2023" },
           description:
-            "A Personal Portfolio website to showcase all my details and projects at one place.",
-          subHeading: "Technologies Used: React JS, Bootsrap",
+            "Weather forecast is a mobile application that gives users overview of weather conditions in your location.",
+          subHeading: "Built with: React JS, Tailwind CSS, Daisy UI, Redux",
+          link: "https://weather-76ks.onrender.com",
+          live: "Go Live 😊"
         },
         {
-          title: "Mobile E-shop ",
-          duration: { fromDate: "2020", toDate: "2021" },
+          title: "Movie Gallery ",
+          duration: { fromDate: "Apr. 2023", toDate: "Apr. 2023" },
           description:
-            "An ecommerce application designed to sell products online wth payment system integration",
+            "A web application for dis playing list of TV series with descriptions and genre and option to like or comment.",
           subHeading:
-            "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+            "Built with:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+          link: 'https://shafiuyushawu.github.io/movie-gallery/dist/',
+          live: "Go Live 😊"
         },
         {
-          title: "Ecommerce Website ",
-          duration: { fromDate: "2020", toDate: "2021" },
+          title: "Movie Gallery ",
+          duration: { fromDate: "Mar. 2023", toDate: "Mar. 2023" },
           description:
-            "Online ecommerce website for showcasing and selling products onlne with payment system integration, both Paypal and Stripe",
+            "An online ticketing page that basically allows users to book tickets.",
           subHeading:
-            "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Bootstrap.",
+            "Built with: React Redux, TailwindCSS, DaisyUI.",
+           link: 'https://shafiuyushawu.github.io/Online-Ticket/',
+          live: "Go Live 😊"
         },
       ];
 
@@ -91,23 +103,21 @@ const Resume = ( props ) => {
       const resumeDetails = [
         <div className="resume-screen-container" key="education">
           <ResumeHeading
-            heading={"University of Legon Accra, Ghana"}
-            subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-            fromDate={"2014"}
-            toDate={"2018"}
+            heading={"MICROVERSE"}
+            subHeading={"Remote Full Stack Web Development Program, Full Time"}
+            fromDate={"Jan. 2023"}
+            toDate={"Aug. 2023"}
+            description={"- Spent 1300+ hours mastering algorithms, data structures, and full-stack development."}
+            description1={"- Developed skills in remote pair-programming using GitHub, industry-standard gitflow, and daily standups to communicate and collaborate with international remote developers."}
           />
     
           <ResumeHeading
-            heading={"National Youth Service Corps"}
-            subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-            fromDate={"2019"}
-            toDate={"2020"}
-          />
-          <ResumeHeading
-            heading={"High School "}
-            subHeading={"Command Secondary School Mbiri"}
-            fromDate={"2007"}
-            toDate={"2012"}
+            heading={"UNIVERSITY OF GHANA"}
+            subHeading={"Degree, Bachelor of Science in Computer Science"}
+            fromDate={"Oct. 2019"}
+            toDate={"Jul. 2020"}
+            description={'- Relevant coursework: Introduction to Statistics, Introduction to Artificial Intelligence, Data Structures and Algorithm, Database Management System, Web Technology, Calculus, Mathematics.'}
+            description1={'- Thesis: Intelligent Traffic Control System (ITCS) - An intelligent system that employs a reinforcement learning approach to control traffic at the intersection based on long queues (traffic density).'}
           />
         </div>,
     
@@ -115,35 +125,37 @@ const Resume = ( props ) => {
         <div className="resume-screen-container" key="work-experience">
           <div className="experience-container">
             <ResumeHeading
-              heading={"Ehizeex Technoloy"}
-              subHeading={"FULL STACK DEVELOPER INTERN"}
-              fromDate={"2021"}
+              heading={"MICROVERSE"}
+              subHeading={"Mentor (Volunteer)"}
+              fromDate={"Feb. 2023"}
               toDate={"Present"}
-            />
+           />
             <div className="experience-description">
               <span className="resume-description-text">
-                Currently working as MERN stack web and mobile developer and also an
-                online instructor on udemy.
+              - Mentoring junior web developers, providing technical support through code reviews.
+              <br />
+              - Proposing improvements to code organization to improve code quality and overall performance.
+              <br />
+              - Providing advice and tips on how to maintain motivation to maintain longevity in the program.
               </span>
             </div>
+            <ResumeHeading
+              heading={"COSCO SHIPPING LINES GHANA"}
+              subHeading={"IT Officer"}
+              fromDate={"Oct 2020"}
+              toDate={"Present"}
+           />
             <div className="experience-description">
               <span className="resume-description-text">
-                - Developed an ecommerce website for client with the dashboard for
-                managing the products, managing reviews, users, payment etc. .
-              </span>
+              - Configured, monitored, maintained, and controlled server room equipment.
               <br />
-              <span className="resume-description-text">
-                - Integrated the web app with backend services to create new user
-                onboarding application with dynamic form content.{" "}
-              </span>
+              - Assisted the team in connecting our Local Area Network to Cosco shipping domain at HQ in Shanghai.
               <br />
-              <span className="resume-description-text">
-                - I stretch my mental capacity to develope UI as per the given
-                designs.
+              - Partnered in migrating all users to the new  Cosco Shipping domain.
               </span>
-              <br />
             </div>
           </div>
+          
         </div>,
     
         /* PROGRAMMING SKILLS */
@@ -168,6 +180,7 @@ const Resume = ( props ) => {
         /* PROJECTS */
         <div className="resume-screen-container" key="projects">
           {projectsDetails.map((projectsDetails, index) => (
+            <>
             <ResumeHeading
               key={index}
               heading={projectsDetails.title}
@@ -175,7 +188,10 @@ const Resume = ( props ) => {
               description={projectsDetails.description}
               fromDate={projectsDetails.duration.fromDate}
               toDate={projectsDetails.duration.toDate}
+              link={projectsDetails.link}
+              live={projectsDetails.live}
             />
+            </>
           ))}
         </div>,
     

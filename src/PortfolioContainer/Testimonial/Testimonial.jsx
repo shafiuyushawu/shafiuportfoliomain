@@ -8,6 +8,10 @@ import ScrollService from '../../utilities/ScrollService'
 import Animations from '../../utilities/Animations';
 import './Testimonial.css'
 
+import Wasiu from '../../assets/Recomendation/wasiu.jpg';
+import Alex from '../../assets/Recomendation/alex.jpg';
+import Amine from '../../assets/Recomendation/amine.jpg';
+
 const Testimonial = ( props ) => {
 
     let fadeInScreenHandler = ( screen ) => {
@@ -40,21 +44,20 @@ const Testimonial = ( props ) => {
 
   return (
     <div>
-        <ScreenHeading title={ 'Testimonial' } subHeading={ 'What My Client Say About Me' } />
+        <ScreenHeading title={ 'Recomendation' } subHeading={ 'What My Superior Say About Me' } />
         <section className='testimonial-section' id={ props.id || '' }>
             <div className="container">
                 <div className="row">
-                    <OwlCarousel classID='owl-carousel' id='testimonial-carousel' { ...options }>
-                        
+                    <OwlCarousel classID='owl-carousel' id='testimonial-carousel' { ...options }> 
                         <div className="col-lg-12">
                             <div className="testi-item">
                                   <div className="testi-comment">
                                         <p> 
                                             <i className='fa fa-quote-left' />
-                                                I patronized Ehizeex and when He delivered, I honestly
-                                                fell in love with the project He is a very honest guy and
-                                                he delivers ontime.
+                                               I had the pleasure of working with Shafiu on several projects, and I must say that he played a vital role in ensuring our success in each project. Shafiu is an exceptional communicator and has a keen eye for detail.
                                            <i className='fa fa-quote-right' />
+                                           <br />
+                                           <a href="https://www.linkedin.com/in/shafiuyushawu/">See more</a>
                                         </p>
                                         <ul className='stars list-unstyled'>
                                             <li>
@@ -75,10 +78,80 @@ const Testimonial = ( props ) => {
                                         </ul>
                                   </div>
                                   <div className="client-info">
-                                    <img src="img/testimonial/lady.png" alt="no internet connection" />
+                                    <img src={Wasiu} alt="no internet connection" />
                                   </div>
-                                  <h5>Shafiu Ibn Yushawu</h5>
-                                  <p>CEO IBNSCO Enterprise</p>
+                                   <h5>AbdulWasiu Omotayo</h5>
+                                  <p>Software Engineer</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-12">
+                            <div className="testi-item">
+                                  <div className="testi-comment">
+                                        <p> 
+                                            <i className='fa fa-quote-left' />
+                                               I am writing to highly recommend Shafiu Ibn Yushawu for the software engineering position in your organization. I have had the pleasure of working with Shafiu for several years, and he has consistently demonstrated exceptional skills and dedication to his work.
+                                           <i className='fa fa-quote-right' />
+                                        <br />
+                                        <a href="https://www.linkedin.com/in/shafiuyushawu/">See more</a>
+                                        </p>
+                                        <ul className='stars list-unstyled'>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star-half-alt' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                        </ul>
+                                  </div>
+                                  <div className="client-info">
+                                    <img src={Alex} alt="no internet connection" />
+                                  </div>
+                                  <h5>Alex Ssenyondo</h5>
+                                  <p>Software Engineer</p>
+                            </div>
+                        </div>
+                        <div className="col-lg-12">
+                            <div className="testi-item">
+                                  <div className="testi-comment">
+                                        <p> 
+                                            <i className='fa fa-quote-left' />
+                                             I am writing to highly recommend Shafiu Ibn Yushawu for any future professional opportunities. I had the pleasure of working with him as a student at Microverse for collaborative projects, during which time he consistently impressed me with his knowledge, work ethic, and positive attitude.
+                                           <i className='fa fa-quote-right' />
+                                        <br />
+                                        <a href="https://www.linkedin.com/in/shafiuyushawu/">See more</a>
+                                        </p>
+                                        <ul className='stars list-unstyled'>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star-half-alt' />
+                                            </li>
+                                            <li>
+                                                <i className='fa fa-star' />
+                                            </li>
+                                        </ul>
+                                  </div>
+                                  <div className="client-info">
+                                    <img src={Amine} alt="no internet connection" />
+                                  </div>
+                                  <h5>Mohammed El Amine Derbal</h5>
+                                  <p>Software Engineer</p>
                             </div>
                         </div>
                         
