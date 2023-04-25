@@ -13,13 +13,13 @@ const AboutMe = ( props ) => {
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe( fadeInScreenHandler )
 
     const SCREEN_CONSTANTS = {
-      description: 'Full stact web develope with background knowlodge of Mango DB, along with building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization',
+      description: 'Full-stack developer who is passionate about open-source projects, and enjoys writing clean and reusable code. I have experience with various programming languages, and frameworks, and  I am skilled in pair programming working remotely.',
       highlights:{
         bullets:[
-          'Full Stack web development',
+          'Web Developer',
           'React and React Native',
-          'Laravel',
-          'Tensorflow: Machine Leaning '
+          'Ruby and Ruby on Rails',
+          'Tensorflow: Machine Leaning ',
         ],
       heading: 'Here are a few Highlights: '
       }
