@@ -70,37 +70,39 @@ const ContactMe = (props  ) => {
     <div className="main-container" id={props.id || ""}>
       <ScreenHeading title={"Contact Me"} subHeading={"Let's Keep In Touch"} />
       <div className="central-form">
-        <div className="col">
-          <h2>
-            <Typewriter
-              options={{
-                strings: ["Get In Touch "],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </h2>
-          <a href="#">
-            <i className="fa fa-facebook-square"></i>
-          </a>
-          <a href="#">
-            <i className="fa fa-google-plus-square"></i>
-          </a>
-          <a href="#">
-            <i className="fa fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i className="fa fa-youtube-square"></i>
-          </a>
-          <a href="#">
-            <i className="fa fa-twitter"></i>
-          </a>
-        </div>
-        <div className="back-form">
-          <div className="img-back">
-            <h4>Send Your Email Here</h4>
-            <img src={ imgBack } alt="image not found" />
-          </div>
+        <div className='contact-details'>
+            <div className="col">
+              <h2>
+                <Typewriter
+                  options={{
+                    strings: ["Get In Touch "],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h2>
+              <a href="#">
+                <i className="fa fa-facebook-square"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-google-plus-square"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-youtube-square"></i>
+              </a>
+              <a href="#">
+                <i className="fa fa-twitter"></i>
+              </a>
+            </div>
+            <div className="back-form">
+              <div className="img-back">
+                <h4>Send Your Email Here</h4>
+                <img src={ imgBack } alt="image not found" />
+              </div>
+            </div>
         </div>
 
         <form action="" onSubmit={ submitForm }>

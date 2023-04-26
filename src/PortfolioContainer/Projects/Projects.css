@@ -1,0 +1,110 @@
+.projects-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+
+.projects-me-parent {
+    max-width: 1000px;
+    width: 70%;
+}
+
+.projects-me-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 0px 20px -2px #1f2235;
+}
+
+.projects-profile {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-profile img {
+    width: 100%;
+}
+
+.project-stack {
+    display: flex;
+}
+
+.projects-me-details {
+    width: 48%;
+    text-align: justify;
+    padding: 30px;
+}
+
+.project-heading {
+    color: var(--dark-orange);
+    font-size: 20px;
+    font-family: "Poppins SemiBold";
+}
+
+.projects-me-description {
+    font-size: 12px;
+}
+
+.projects-me-highlights {
+    margin: 40px 0;
+}
+
+.highlght-heading {
+    font-family: "Poppins Bold";
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.highlight-blob {
+    height: 12px;
+    width: 12px;
+    margin: 0 10px 0 0;
+    background-color: #ff5823;
+    border-radius: 50%;
+}
+
+.projects-me-options .highlighted-btn {
+    margin: 0 0 0 30px;
+}
+
+/*IPAD PRO RESPONSIVENESS*/
+@media only screen and (max-width: 1110px) {
+    .projects-me-card {
+        flex-direction: column;
+    }
+
+    .projects-me-parent {
+        width: 88%;
+    }
+}
+
+@media only screen and (max-width: 898px) {
+    .projects-me-details {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 466px) {
+    .projects-me-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projects-me-options .highlighted-btn {
+        margin: 24px 0 0 0 !important;
+    }
+
+    .projects-me-options button {
+        width: 100%;
+    }
+}

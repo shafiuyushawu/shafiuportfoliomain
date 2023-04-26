@@ -4,35 +4,35 @@ import ScrollService from '../../utilities/ScrollService'
 import Animations from '../../utilities/Animations'
 import './AboutMe.css'
 
-const AboutMe = ( props ) => {
+const AboutMe = (props) => {
 
-    let fadeInScreenHandler = ( screen ) => {
-        if( screen.fadeScreen !== props.id ) return
-        Animations.animations.fadeInScreen( props.id )
-    }
-    const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe( fadeInScreenHandler )
+  let fadeInScreenHandler = (screen) => {
+    if (screen.fadeScreen !== props.id) return
+    Animations.animations.fadeInScreen(props.id)
+  }
+  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
-    const SCREEN_CONSTANTS = {
-      description: 'Full-stack developer who is passionate about open-source projects, and enjoys writing clean and reusable code. I have experience with various programming languages, and frameworks, and  I am skilled in pair programming working remotely.',
-      highlights:{
-        bullets:[
-          'Web Developer',
-          'React and React Native',
-          'Ruby and Ruby on Rails',
-          'Tensorflow: Machine Leaning ',
-        ],
+  const SCREEN_CONSTANTS = {
+    description: 'Full-stack developer who is passionate about open-source projects, and enjoys writing clean and reusable code. I have experience with various programming languages, and frameworks, and  I am skilled in pair programming working remotely.',
+    highlights: {
+      bullets: [
+        'Web Developer',
+        'React and React Native',
+        'Ruby and Ruby on Rails',
+        'Tensorflow: Machine Leaning ',
+      ],
       heading: 'Here are a few Highlights: '
-      }
     }
+  }
 
-    const renderHighlight = () => {
-      return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
-        <div className="highlight" key={i}>
-          <div className="highlight-blob"></div>
-          <span>{ value }</span>
-        </div>
-      ));
-    };
+  const renderHighlight = () => {
+    return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
+      <div className="highlight" key={i}>
+        <div className="highlight-blob"></div>
+        <span>{value}</span>
+      </div>
+    ));
+  };
 
   return (
     <div className="about-me-container screen-container" id={props.id || ""}>
@@ -46,7 +46,7 @@ const AboutMe = ( props ) => {
             </span>
             <div className="about-me-highlights">
               <div className="highlight-heading">
-                <span>{ SCREEN_CONSTANTS.highlights.heading }</span>
+                <span>{SCREEN_CONSTANTS.highlights.heading}</span>
               </div>
               {renderHighlight()}
             </div>
