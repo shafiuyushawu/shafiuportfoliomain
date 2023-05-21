@@ -21,7 +21,7 @@
 .central-form h2 {
   width: 100%;
   color: #fff;
-  font-family: "Poppins Bold";
+  font-family: 'Poppins Bold';
   letter-spacing: 0.2rem;
   margin-bottom: 20px;
 }
@@ -72,7 +72,7 @@ form p {
   margin-bottom: 10px;
   color: #ff5823;
   letter-spacing: 0.1rem;
-  font-family: "Poppins Bold";
+  font-family: 'Poppins Bold';
 }
 
 form label {
@@ -135,12 +135,13 @@ button .load img {
   color: green;
 }
 
-.col i {
-  padding: 7px;
+.col .icon {
+  font-size: 30px;
+  padding: 0 5px;
   color: #fff;
 }
 
-.col i:hover {
+.col .icon:hover {
   transform: scale(1.5);
 }
 
@@ -166,11 +167,21 @@ button .load img {
   form {
     flex: 0.9;
   }
+
+  .col {
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 414px) {
-
   .central-form h2 {
     font-size: 16px;
+  }
+  .col {
+    padding: 0px;
+  }
+
+  .contact-details {
+    width: 100%;
   }
 }
