@@ -52,15 +52,21 @@
 }
 
 body {
+  font-family: "Poppins Regular", sans-serif;
   margin: 0;
-  overflow-y: overlay;
-  font-family: "Poppins Regular";
+
+  /* overflow-y: overlay; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Courier New",
     monospace;
 }
 
@@ -73,21 +79,21 @@ body ::-webkit-scrollbar-thumb {
   background-color: hsla(0, 0%, 100%, 0.16);
 }
 
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-track {
   background: hsla(0, 0%, 100%, 0.1);
-}
+} */
 
 .btn {
+  font-family: "Poppins SemiBold", sans-serif;
   border-radius: 50px;
   padding: 14px 0;
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
-  font-family: "Poppins SemiBold";
 }
 
 .btn:active {
@@ -100,6 +106,7 @@ body ::-webkit-scrollbar-thumb {
   font-size: 12px;
   background-color: #1f2235;
 }
+
 /* @media only screen and (max-width: 414px) {
   .primary-btn {
     font-size: 13px;
@@ -114,10 +121,10 @@ body ::-webkit-scrollbar-thumb {
 
 .highlighted-btn {
   color: var(--white);
-
   font-size: 12px;
   background-color: #ff5823;
 }
+
 @media only screen and (max-width: 568px) {
   .highlighted-btn {
     z-index: -900;

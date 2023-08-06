@@ -1,4 +1,4 @@
-import weather from '../../../assets/Projects/weather.jpg'
+import weather from '../../../assets/Projects/weather.jpg';
 
 const Weather = () => {
   const SCREEN_CONSTANTS = {
@@ -10,18 +10,16 @@ const Weather = () => {
         'Tailwind CSS',
         'Daisy UI ',
       ],
-      heading: 'Built with: '
-    }
-  }
-
-  const renderHighlight = () => {
-    return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
-      <div className="highlight" key={i}>
-        <div className="highlight-blob"></div>
-        <span className='project-stack'>{value}</span>
-      </div>
-    ));
+      heading: 'Built with: ',
+    },
   };
+
+  const renderHighlight = () => SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
+    <div className="highlight" key={i}>
+      <div className="highlight-blob" />
+      <span className="project-stack">{value}</span>
+    </div>
+  ));
 
   return (
     <>
@@ -30,7 +28,7 @@ const Weather = () => {
           <img src={weather} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className='project-heading'>Weather</h3>
+          <h3 className="project-heading">Weather</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -48,7 +46,7 @@ const Weather = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Weather
+export default Weather;

@@ -44,7 +44,7 @@
   color: var(--dark-orange);
 }
 
-/*IPAD PRO RESPONSIVENESS*/
+/* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
   header-parent {
     width: 80%;
@@ -68,7 +68,7 @@
     position: absolute;
     left: -100%;
     transition: all 0.8s ease-out;
-    top: 0px;
+    top: 0;
     height: 100vh;
     width: 100%;
     justify-content: space-around;
@@ -88,7 +88,7 @@
   .header-hamburger-bars {
     font-size: 36px;
     cursor: pointer;
-    margin: 0px 10px;
+    margin: 0 10px;
     color: var(--white);
   }
 

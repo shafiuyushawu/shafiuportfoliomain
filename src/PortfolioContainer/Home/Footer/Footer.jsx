@@ -1,13 +1,13 @@
-import React from 'react'
-import './Footer.css'
-const Footer = () => {
-  return (
-    <div className='footer-container'>
-        <div className="footer-parent">
-           <img src={ require('../../../assets/Home/shape-bg.png') } alt="" />
-        </div>
-    </div>
-  )
-}
+import React from 'react';
+import './Footer.css';
+import shape from '../../../assets/Home/shape-bg.png';
 
-export default Footer
+const Footer = () => (
+  <div className="footer-container">
+    <div className="footer-parent">
+      <img src={shape} alt="shape bg not found" />
+    </div>
+  </div>
+);
+
+export default Footer;

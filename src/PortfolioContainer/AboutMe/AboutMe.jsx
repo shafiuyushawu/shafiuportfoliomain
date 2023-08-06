@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
-import ScrollService from '../../utilities/ScrollService';
-import Animations from '../../utilities/Animations';
+// import ScrollService from '../../utilities/ScrollService';
+// import Animations from '../../utilities/Animations';
 import './AboutMe.css';
 
 import resume from '../../assets/Home/Shafiu.pdf';
 
-const AboutMe = (props) => {
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+const AboutMe = ({ id }) => {
+  // const fadeInScreenHandler = (screen) => {
+  //   if (screen.fadeScreen !== id) return;
+  //   Animations.animations.fadeInScreen(id);
+  // };
+  // const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const SCREEN_CONSTANTS = {
     description:
@@ -28,21 +27,19 @@ const AboutMe = (props) => {
     },
   };
 
-  const renderHighlight = () => {
-    return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
-      <div className="highlight" key={i}>
-        <div className="highlight-blob"></div>
-        <span>{value}</span>
-      </div>
-    ));
-  };
+  const renderHighlight = () => SCREEN_CONSTANTS.highlights.bullets.map((value) => (
+    <div className="highlight" key={value.id}>
+      <div className="highlight-blob" />
+      <span>{value}</span>
+    </div>
+  ));
 
   return (
-    <div className="about-me-container screen-container" id={props.id || ''}>
+    <div className="about-me-container screen-container" id={id || ''}>
       <div className="about-me-parent">
-        <ScreenHeading title={'About Me'} subHeading={'Why Choose Me?'} />
+        <ScreenHeading title="About Me" subHeading="Why Choose Me?" />
         <div className="about-me-card">
-          <div className="about-me-profile"></div>
+          <div className="about-me-profile" />
           <div className="about-me-details">
             <span className="about-me-description">
               {SCREEN_CONSTANTS.description}
@@ -55,13 +52,16 @@ const AboutMe = (props) => {
             </div>
             <div className="about-me-options">
               <button
+                type="button"
                 className="btn primary-btn"
-                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
+              >
+                {/* onClick={() => ScrollService.scrollHandler.scrollToHireMe()} */}
                 {' '}
-                Hire Me{' '}
+                Hire Me
+                {' '}
               </button>
               <a href={resume} download="Shafiu's.pdf">
-                <button className="btn highlighted-btn">Get Resume</button>
+                <button type="button" className="btn highlighted-btn">Get Resume</button>
               </a>
             </div>
           </div>
@@ -69,6 +69,10 @@ const AboutMe = (props) => {
       </div>
     </div>
   );
+};
+
+AboutMe.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default AboutMe;

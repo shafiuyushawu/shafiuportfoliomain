@@ -8,42 +8,39 @@ const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
-  let fadeInScreenHandler = (screen) => {
+  const fadeInScreenHandler = (screen) => {
     if (screen.fadeScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const ResumeHeading = (props) => {
-    return (
-      <div className="resume-heading">
-        <div className="resume-main-heading">
-          <div className="heading-bullet"></div>
-          <span>{props.heading ? props.heading : ''}</span>
-          {props.fromDate && props.toDate ? (
-            <div className="heading-date">
-              {props.fromDate + '-' + props.toDate}
-            </div>
-          ) : (
-            <div></div>
-          )}
-        </div>
-        <div className="resume-sub-heading">
-          <span>{props.subHeading ? props.subHeading : ''}</span>
-        </div>
-        <div className="resume-heading-description">
-          <span>{props.description ? props.description : ''}</span>
-        </div>
-        <div className="resume-heading-description">
-          <span>{props.description1 ? props.description1 : ''}</span>
-        </div>
-        <div className="resume-heading-description">
-          <a href={props.link}>{props.live ? props.live : ''}</a>
-        </div>
+  const ResumeHeading = (props) => (
+    <div className="resume-heading">
+      <div className="resume-main-heading">
+        <div className="heading-bullet" />
+        <span>{props.heading ? props.heading : ''}</span>
+        {props.fromDate && props.toDate ? (
+          <div className="heading-date">
+            {`${props.fromDate}-${props.toDate}`}
+          </div>
+        ) : (
+          <div />
+        )}
       </div>
-    );
-  };
+      <div className="resume-sub-heading">
+        <span>{props.subHeading ? props.subHeading : ''}</span>
+      </div>
+      <div className="resume-heading-description">
+        <span>{props.description ? props.description : ''}</span>
+      </div>
+      <div className="resume-heading-description">
+        <span>{props.description1 ? props.description1 : ''}</span>
+      </div>
+      <div className="resume-heading-description">
+        <a href={props.link}>{props.live ? props.live : ''}</a>
+      </div>
+    </div>
+  );
 
   const resumeBullets = [
     { label: 'Education', logoSrc: 'education.svg' },
@@ -99,29 +96,21 @@ const Resume = (props) => {
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={'MICROVERSE'}
-        subHeading={'Remote Full Stack Web Development Program, Full Time'}
-        fromDate={'Jan. 2023'}
-        toDate={'Aug. 2023'}
-        description={
-          '- Spent 1300+ hours mastering algorithms, data structures, and full-stack development.'
-        }
-        description1={
-          '- Developed skills in remote pair-programming using GitHub, industry-standard gitflow, and daily standups to communicate and collaborate with international remote developers.'
-        }
+        heading="MICROVERSE"
+        subHeading="Remote Full Stack Web Development Program, Full Time"
+        fromDate="Jan. 2023"
+        toDate="Aug. 2023"
+        description="- Spent 1300+ hours mastering algorithms, data structures, and full-stack development."
+        description1="- Developed skills in remote pair-programming using GitHub, industry-standard gitflow, and daily standups to communicate and collaborate with international remote developers."
       />
 
       <ResumeHeading
-        heading={'UNIVERSITY OF GHANA'}
-        subHeading={'Degree, Bachelor of Science in Computer Science'}
-        fromDate={'Oct. 2019'}
-        toDate={'Jul. 2020'}
-        description={
-          '- Relevant coursework: Introduction to Statistics, Introduction to Artificial Intelligence, Data Structures and Algorithm, Database Management System, Web Technology, Calculus, Mathematics.'
-        }
-        description1={
-          '- Thesis: Intelligent Traffic Control System (ITCS) - An intelligent system that employs reinforcement learning approach to control traffic at the intersection.'
-        }
+        heading="UNIVERSITY OF GHANA"
+        subHeading="Degree, Bachelor of Science in Computer Science"
+        fromDate="Oct. 2019"
+        toDate="Jul. 2020"
+        description="- Relevant coursework: Introduction to Statistics, Introduction to Artificial Intelligence, Data Structures and Algorithm, Database Management System, Web Technology, Calculus, Mathematics."
+        description1="- Thesis: Intelligent Traffic Control System (ITCS) - An intelligent system that employs reinforcement learning approach to control traffic at the intersection."
       />
     </div>,
 
@@ -129,10 +118,10 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={'MICROVERSE'}
-          subHeading={'Mentor (Volunteer)'}
-          fromDate={'Feb. 2023'}
-          toDate={'Present'}
+          heading="MICROVERSE"
+          subHeading="Mentor (Volunteer)"
+          fromDate="Feb. 2023"
+          toDate="Present"
         />
         <div className="experience-description">
           <span className="resume-description-text">
@@ -141,15 +130,16 @@ const Resume = (props) => {
             <br />
             - Proposing improvements to code organization to improve code
             quality and overall performance.
-            <br />- Providing advice and tips on how to maintain motivation to
+            <br />
+            - Providing advice and tips on how to maintain motivation to
             maintain longevity in the program.
           </span>
         </div>
         <ResumeHeading
-          heading={'COSCO SHIPPING LINES GHANA'}
-          subHeading={'IT Officer'}
-          fromDate={'Oct 2020'}
-          toDate={'Present'}
+          heading="COSCO SHIPPING LINES GHANA"
+          subHeading="IT Officer"
+          fromDate="Oct 2020"
+          toDate="Present"
         />
         <div className="experience-description">
           <span className="resume-description-text">
@@ -158,7 +148,8 @@ const Resume = (props) => {
             <br />
             - Assisted the team in connecting our Local Area Network to Cosco
             shipping domain at HQ in Shanghai.
-            <br />- Partnered in migrating all users to the new Cosco Shipping
+            <br />
+            - Partnered in migrating all users to the new Cosco Shipping
             domain.
           </span>
         </div>
@@ -168,15 +159,17 @@ const Resume = (props) => {
     /* PROGRAMMING SKILLS */
     <div
       className="resume-screen-container programming-skills-container"
-      key="programming-skills">
+      key="programming-skills"
+    >
       {programmingSkillsDetails.map((skill, index) => (
         <div className="skill-parent" key={index}>
-          <div className="heading-bullet"></div>
+          <div className="heading-bullet" />
           <span>{skill.skill}</span>
           <div className="skill-percentage">
             <div
-              style={{ width: skill.ratingPercentage + '%' }}
-              className="active-percentage-bar"></div>
+              style={{ width: `${skill.ratingPercentage}%` }}
+              className="active-percentage-bar"
+            />
           </div>
         </div>
       ))}
@@ -218,52 +211,50 @@ const Resume = (props) => {
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
+    const offsetHeight = 360;
 
-    let newCarousalOffset = {
-      style: { transform: 'translateY(' + index * offsetHeight * -1 + 'px)' },
+    const newCarousalOffset = {
+      style: { transform: `translateY(${index * offsetHeight * -1}px)` },
     };
 
     setCarousalOffsetStyle(newCarousalOffset);
     setSelectedBulletIndex(index);
   };
 
-  const getBullets = () => {
-    return resumeBullets.map((bullet, index) => (
-      <div
-        onClick={() => handleCarousal(index)}
-        className={
+  const getBullets = () => resumeBullets.map((bullet, index) => (
+    <div
+      onClick={() => handleCarousal(index)}
+      className={
           index === selectedBulletIndex ? 'bullet selected-bullet' : 'bullet'
         }
-        key={index}>
-        <img
-          className="bullet-logo"
-          src={require(`../../assets/Resume/${bullet.logoSrc}`)}
-          alt="B"
-        />
-        <span className="bullet-label">{bullet.label}</span>
-      </div>
-    ));
-  };
+      key={index}
+    >
+      <img
+        className="bullet-logo"
+        src={require(`../../assets/Resume/${bullet.logoSrc}`)}
+        alt="B"
+      />
+      <span className="bullet-label">{bullet.label}</span>
+    </div>
+  ));
 
-  const getResumeScreens = () => {
-    return (
-      <div
-        style={carousalOffsetStyle.style}
-        className="resume-details-carousal">
-        {resumeDetails.map((ResumeDetail) => ResumeDetail)}
-      </div>
-    );
-  };
+  const getResumeScreens = () => (
+    <div
+      style={carousalOffsetStyle.style}
+      className="resume-details-carousal"
+    >
+      {resumeDetails.map((ResumeDetail) => ResumeDetail)}
+    </div>
+  );
 
   return (
     <div className="resume-container screen-container " id={props.id || ''}>
       <div className="resume-content">
-        <ScreenHeading title={'Resume'} subHeading={'My formal Bio Details'} />
+        <ScreenHeading title="Resume" subHeading="My formal Bio Details" />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
-              <div className="bullet-icons"></div>
+              <div className="bullet-icons" />
               <div className="bullets">{getBullets()}</div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 .main-container {
   min-height: 100vh;
+
   /* background-image: url("../../assets/ContactMe/contact_us.jpeg"); */
 
   margin: 100px 0 -450px 0;
@@ -10,18 +11,19 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  box-shadow: 0 0 20px -2px #1f2235;
   border-radius: 12px;
   margin: 0 auto;
+
   /* flex-direction: column; */
   justify-content: center;
   background-color: #1f2235;
 }
 
 .central-form h2 {
+  font-family: 'Poppins Bold', sans-serif;
   width: 100%;
   color: #fff;
-  font-family: 'Poppins Bold';
   letter-spacing: 0.2rem;
   margin-bottom: 20px;
 }
@@ -51,7 +53,8 @@
 
 .central-form form {
   width: auto;
-  box-shadow: 0 0 2px 1px white;
+
+  /* box-shadow: 0 0 2px 1px white; */
   display: flex;
   color: #111;
   padding: 15px;
@@ -59,7 +62,7 @@
   flex-direction: column;
   opacity: 0.9;
   background-color: white;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  box-shadow: 0 0 20px -2px #1f2235;
   border-radius: 12px;
 }
 
@@ -68,11 +71,11 @@
 }
 
 form p {
+  font-family: 'Poppins Bold', sans-serif;
   text-align: center;
   margin-bottom: 10px;
   color: #ff5823;
   letter-spacing: 0.1rem;
-  font-family: 'Poppins Bold';
 }
 
 form label {
@@ -108,10 +111,12 @@ form button {
   margin-top: 15px;
   padding: 5px;
   outline: none;
-  width: 900px;
+
+  /* width: 900px; */
   color: rgb(230, 227, 227);
   border: 2px solid #ff5823;
-  font-size: 12px;
+
+  /* font-size: 12px; */
   border-radius: 19px;
   background-color: #1f2235;
   font-size: 18px;
@@ -123,16 +128,17 @@ form button {
 form button:hover {
   background-color: #1f2235;
   transition: all ease 1s;
-  border: 2px solid #1f2235;
-}
 
-button .load {
-  width: 100%;
+  /* border: 2px solid #1f2235; */
 }
 
 button .load img {
   width: 60px;
   color: green;
+}
+
+button .load {
+  width: 100%;
 }
 
 .col .icon {
@@ -169,7 +175,7 @@ button .load img {
   }
 
   .col {
-    padding: 0px;
+    padding: 0;
   }
 }
 
@@ -177,8 +183,9 @@ button .load img {
   .central-form h2 {
     font-size: 16px;
   }
+
   .col {
-    padding: 0px;
+    padding: 0;
   }
 
   .contact-details {

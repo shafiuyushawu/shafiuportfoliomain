@@ -14,7 +14,7 @@
 .about-me-card {
   display: flex;
   width: 100%;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  box-shadow: 0 0 20px -2px #1f2235;
 }
 
 .about-me-profile {
@@ -40,7 +40,7 @@
 }
 
 .highlght-heading {
-  font-family: "Poppins Bold";
+  font-family: "Poppins Bold", sans-serif;
   font-size: 14px;
   margin: 0 0 5px 0;
 }
@@ -64,7 +64,7 @@
   margin: 0 0 0 30px;
 }
 
-/*IPAD PRO RESPONSIVENESS*/
+/* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
   .about-me-parent {
     width: 88%;
