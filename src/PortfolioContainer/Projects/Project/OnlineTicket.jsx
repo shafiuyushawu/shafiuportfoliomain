@@ -13,8 +13,8 @@ const Weather = () => {
     },
   };
 
-  const renderHighlight = () => SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
-    <div className="highlight" key={i}>
+  const renderHighlight = () => SCREEN_CONSTANTS.highlights.bullets.map((value) => (
+    <div className="highlight" key={value}>
       <div className="highlight-blob" />
       <span className="project-stack">{value}</span>
     </div>
@@ -40,7 +40,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <button className="btn highlighted-btn">See Projects</button>
+            <button type="button" className="btn highlighted-btn">See Projects</button>
           </div>
         </div>
       </div>

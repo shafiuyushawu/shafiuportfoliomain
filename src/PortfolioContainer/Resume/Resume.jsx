@@ -1,69 +1,65 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
-import ScrollService from '../../utilities/ScrollService';
-import Animations from '../../utilities/Animations';
 import './Resume.css';
 
-const Resume = (props) => {
+const Resume = () => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
-  const fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-  const ResumeHeading = (props) => (
+  const ResumeHeading = ({
+    heading, fromDate, toDate, subHeading, description, description1, link, live,
+  }) => (
     <div className="resume-heading">
       <div className="resume-main-heading">
         <div className="heading-bullet" />
-        <span>{props.heading ? props.heading : ''}</span>
-        {props.fromDate && props.toDate ? (
+        <span>{heading || ''}</span>
+        {fromDate && toDate ? (
           <div className="heading-date">
-            {`${props.fromDate}-${props.toDate}`}
+            {`${fromDate}-${toDate}`}
           </div>
         ) : (
           <div />
         )}
       </div>
       <div className="resume-sub-heading">
-        <span>{props.subHeading ? props.subHeading : ''}</span>
+        <span>{subHeading || ''}</span>
       </div>
       <div className="resume-heading-description">
-        <span>{props.description ? props.description : ''}</span>
+        <span>{description || ''}</span>
       </div>
       <div className="resume-heading-description">
-        <span>{props.description1 ? props.description1 : ''}</span>
+        <span>{description1 || ''}</span>
       </div>
       <div className="resume-heading-description">
-        <a href={props.link}>{props.live ? props.live : ''}</a>
+        <a href={link}>{live || ''}</a>
       </div>
     </div>
   );
 
   const resumeBullets = [
-    { label: 'Education', logoSrc: 'education.svg' },
-    { label: 'Work History', logoSrc: 'work-history.svg' },
-    { label: 'Programming Skills', logoSrc: 'programming-skills.svg' },
-    { label: 'Projects', logoSrc: 'projects.svg' },
-    { label: 'Interests', logoSrc: 'interests.svg' },
+    { id: 1, label: 'Education', logoSrc: 'education.svg' },
+    { id: 2, label: 'Work History', logoSrc: 'work-history.svg' },
+    { id: 3, label: 'Programming Skills', logoSrc: 'programming-skills.svg' },
+    { id: 4, label: 'Projects', logoSrc: 'projects.svg' },
+    { id: 5, label: 'Interests', logoSrc: 'interests.svg' },
   ];
 
   const programmingSkillsDetails = [
-    { skill: 'JavaScript', ratingPercentage: 90 },
-    { skill: 'React JS', ratingPercentage: 90 },
-    { skill: 'React Native', ratingPercentage: 65 },
-    { skill: 'Express JS', ratingPercentage: 40 },
-    { skill: 'Node JS', ratingPercentage: 30 },
-    { skill: 'Mongo Db', ratingPercentage: 20 },
-    { skill: 'Tailwind CSS & Daisy UI', ratingPercentage: 95 },
-    { skill: 'HTML', ratingPercentage: 97 },
-    { skill: 'CSS', ratingPercentage: 95 },
+    { id: 1, skill: 'JavaScript', ratingPercentage: 90 },
+    { id: 2, skill: 'React JS', ratingPercentage: 90 },
+    { id: 3, skill: 'React Native', ratingPercentage: 65 },
+    { id: 4, skill: 'Express JS', ratingPercentage: 40 },
+    { id: 6, skill: 'Node JS', ratingPercentage: 30 },
+    { id: 7, skill: 'Mongo Db', ratingPercentage: 20 },
+    { id: 8, skill: 'Tailwind CSS & Daisy UI', ratingPercentage: 95 },
+    { id: 9, skill: 'HTML', ratingPercentage: 97 },
+    { id: 10, skill: 'CSS', ratingPercentage: 95 },
   ];
 
   const projectsDetails = [
     {
+      id: 1,
       title: 'Weather',
       duration: { fromDate: 'Apr. 2023', toDate: 'Apr. 2023' },
       description:
@@ -73,6 +69,7 @@ const Resume = (props) => {
       live: 'Go Live 😊',
     },
     {
+      id: 2,
       title: 'Movie Gallery ',
       duration: { fromDate: 'Apr. 2023', toDate: 'Apr. 2023' },
       description:
@@ -83,6 +80,7 @@ const Resume = (props) => {
       live: 'Go Live 😊',
     },
     {
+      id: 3,
       title: 'Movie Gallery ',
       duration: { fromDate: 'Mar. 2023', toDate: 'Mar. 2023' },
       description:
@@ -161,8 +159,8 @@ const Resume = (props) => {
       className="resume-screen-container programming-skills-container"
       key="programming-skills"
     >
-      {programmingSkillsDetails.map((skill, index) => (
-        <div className="skill-parent" key={index}>
+      {programmingSkillsDetails.map((skill) => (
+        <div className="skill-parent" key={skill.id}>
           <div className="heading-bullet" />
           <span>{skill.skill}</span>
           <div className="skill-percentage">
@@ -177,10 +175,10 @@ const Resume = (props) => {
 
     /* PROJECTS */
     <div className="resume-screen-container" key="projects">
-      {projectsDetails.map((projectsDetails, index) => (
+      {projectsDetails.map((projectsDetails) => (
         <>
           <ResumeHeading
-            key={index}
+            key={projectsDetails.id}
             heading={projectsDetails.title}
             subHeading={projectsDetails.subHeading}
             description={projectsDetails.description}
@@ -221,21 +219,22 @@ const Resume = (props) => {
     setSelectedBulletIndex(index);
   };
 
-  const getBullets = () => resumeBullets.map((bullet, index) => (
-    <div
-      onClick={() => handleCarousal(index)}
+  const getBullets = () => resumeBullets.map((bullet) => (
+    <button
+      type="button"
+      onClick={() => handleCarousal(bullet.id)}
       className={
-          index === selectedBulletIndex ? 'bullet selected-bullet' : 'bullet'
+          bullet.id === selectedBulletIndex ? 'bullet selected-bullet' : 'bullet'
         }
-      key={index}
+      key={bullet.id}
     >
       <img
         className="bullet-logo"
-        src={require(`../../assets/Resume/${bullet.logoSrc}`)}
+        src={(`../../assets/Resume/${bullet.logoSrc}`)}
         alt="B"
       />
       <span className="bullet-label">{bullet.label}</span>
-    </div>
+    </button>
   ));
 
   const getResumeScreens = () => (
@@ -248,7 +247,7 @@ const Resume = (props) => {
   );
 
   return (
-    <div className="resume-container screen-container " id={props.id || ''}>
+    <div className="resume-container screen-container ">
       <div className="resume-content">
         <ScreenHeading title="Resume" subHeading="My formal Bio Details" />
         <div className="resume-card">
@@ -264,6 +263,17 @@ const Resume = (props) => {
       </div>
     </div>
   );
+};
+
+Resume.propTypes = {
+  heading: PropTypes.string.isRequired,
+  toDate: PropTypes.string.isRequired,
+  fromDate: PropTypes.string.isRequired,
+  subHeading: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  description1: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  live: PropTypes.string.isRequired,
 };
 
 export default Resume;

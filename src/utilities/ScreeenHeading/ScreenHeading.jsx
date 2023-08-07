@@ -1,16 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ScreenHeading.css';
 
-const ScreenHeading = (props) => (
+const ScreenHeading = ({ title, subHeading }) => (
   <div className="heading-container">
     <div className="screen-heading">
-      <span>{ props.title }</span>
+      <span>{title }</span>
     </div>
     {
-            props.subHeading
+            subHeading
               ? (
                 <div className="screen-sub-heading">
-                  <span>{ props.subHeading }</span>
+                  <span>{ subHeading }</span>
                 </div>
               )
               : <div />
@@ -26,5 +27,10 @@ const ScreenHeading = (props) => (
 
   </div>
 );
+
+ScreenHeading.propTypes = {
+  title: PropTypes.string.isRequired,
+  subHeading: PropTypes.string.isRequired,
+};
 
 export default ScreenHeading;

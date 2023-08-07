@@ -1,24 +1,13 @@
-import React, { useEffect } from 'react';
-import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
-import ScrollService from '../../utilities/ScrollService';
-import Animations from '../../utilities/Animations';
-
-import './Projects.css';
-
+import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-
 import Weather from './Project/Weather';
 import OnlineTicket from './Project/OnlineTicket';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
+import './Projects.css';
 
-const AboutMe = (props) => {
-  const fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
-  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
+const AboutMe = () => {
   const options = {
     loop: false,
     margin: 0,
@@ -39,7 +28,7 @@ const AboutMe = (props) => {
   };
 
   return (
-    <div className="projects-me-container screen-container" id={props.id || ''}>
+    <div className="projects-me-container screen-container">
       <div className="projects-me-parent">
         <ScreenHeading title="Projects" subHeading="Highlighted Personal Projects" />
         <OwlCarousel classID="owl-carousel" id="testimonial-carousel" {...options}>

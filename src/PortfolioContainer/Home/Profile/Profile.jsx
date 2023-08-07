@@ -1,15 +1,11 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import ScrollService from '../../../utilities/ScrollService';
-import Animations from '../../../utilities/Animations';
 import './Profile.css';
-
-import resume from '../../../assets/Home/Shafiu.pdf';
-
 import {
   FaGithub, FaLinkedinIn, FaTwitter, FaAngellist,
 } from 'react-icons/fa';
 import { SiMedium } from 'react-icons/si';
+import resume from '../../../assets/Home/Shafiu.pdf';
 
 const Profile = () => (
   <div className="profile-container">
@@ -37,7 +33,6 @@ const Profile = () => (
 
         <div className="profile-details-name">
           <span className="primary-text">
-
             Hello, I'M
             {' '}
             <span className="highlighted-text">Shafiu</span>

@@ -1,18 +1,8 @@
-import PropTypes from 'prop-types';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
-// import ScrollService from '../../utilities/ScrollService';
-// import Animations from '../../utilities/Animations';
 import './AboutMe.css';
-
 import resume from '../../assets/Home/Shafiu.pdf';
 
-const AboutMe = ({ id }) => {
-  // const fadeInScreenHandler = (screen) => {
-  //   if (screen.fadeScreen !== id) return;
-  //   Animations.animations.fadeInScreen(id);
-  // };
-  // const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
+const AboutMe = () => {
   const SCREEN_CONSTANTS = {
     description:
       'Full-stack developer who is passionate about open-source projects, and enjoys writing clean and reusable code. I have experience with various programming languages, and frameworks, and  I am skilled in pair programming working remotely.',
@@ -35,7 +25,7 @@ const AboutMe = ({ id }) => {
   ));
 
   return (
-    <div className="about-me-container screen-container" id={id || ''}>
+    <div className="about-me-container screen-container">
       <div className="about-me-parent">
         <ScreenHeading title="About Me" subHeading="Why Choose Me?" />
         <div className="about-me-card">
@@ -69,10 +59,6 @@ const AboutMe = ({ id }) => {
       </div>
     </div>
   );
-};
-
-AboutMe.propTypes = {
-  id: PropTypes.number.isRequired,
 };
 
 export default AboutMe;
