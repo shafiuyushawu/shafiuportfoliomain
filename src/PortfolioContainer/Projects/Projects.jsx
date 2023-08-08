@@ -31,7 +31,7 @@ const AboutMe = () => {
     <div className="projects-me-container screen-container">
       <div className="projects-me-parent">
         <ScreenHeading title="Projects" subHeading="Highlighted Personal Projects" />
-        <OwlCarousel classID="owl-carousel" id="testimonial-carousel" {...options}>
+        <OwlCarousel classID="owl-carousel" id="testimonial-carousel" options={options}>
           <Weather />
           <OnlineTicket />
         </OwlCarousel>

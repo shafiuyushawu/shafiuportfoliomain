@@ -37,6 +37,17 @@ const Resume = () => {
     </div>
   );
 
+  ResumeHeading.propTypes = {
+    heading: PropTypes.string.isRequired,
+    toDate: PropTypes.string.isRequired,
+    fromDate: PropTypes.string.isRequired,
+    subHeading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    description1: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    live: PropTypes.string.isRequired,
+  };
+
   const resumeBullets = [
     { id: 1, label: 'Education', logoSrc: 'education.svg' },
     { id: 2, label: 'Work History', logoSrc: 'work-history.svg' },
@@ -263,17 +274,6 @@ const Resume = () => {
       </div>
     </div>
   );
-};
-
-Resume.propTypes = {
-  heading: PropTypes.string.isRequired,
-  toDate: PropTypes.string.isRequired,
-  fromDate: PropTypes.string.isRequired,
-  subHeading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  description1: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  live: PropTypes.string.isRequired,
 };
 
 export default Resume;

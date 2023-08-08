@@ -4,18 +4,10 @@ import {
   FaGithub, FaLinkedinIn, FaTwitter, FaAngellist,
 } from 'react-icons/fa';
 import { SiMedium } from 'react-icons/si';
-
 import imgBack from '../../images/mailz.jpeg';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
-// import ScrollService from '../../utilities/ScrollService';
-// import Animations from '../../utilities/Animations';
 import './ContactMe.css';
 
-// const fadeInScreenHandler = (screen) => {
-//   if (screen.fadeScreen !== props.id) return;
-//   Animations.animations.fadeInScreen(id);
-// };
-// const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 const ContactMe = ({ id }) => (
   <div className="main-container" id={id || ''}>
     <ScreenHeading title="Contact Me" subHeading={"Let's Keep In Touch"} />

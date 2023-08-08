@@ -33,7 +33,7 @@ const Profile = () => (
 
         <div className="profile-details-name">
           <span className="primary-text">
-            Hello, I'M
+            Hello, I&apos;M
             {' '}
             <span className="highlighted-text">Shafiu</span>
           </span>
@@ -65,8 +65,8 @@ const Profile = () => (
 
         <div className="profile-options">
           <button
+            type="button"
             className="btn primary-btn"
-            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
           >
 
             Hire Me
@@ -74,7 +74,7 @@ const Profile = () => (
 
           </button>
           <a href={resume} download="Shafiu Ibn Yushawu.pdf">
-            <button className="btn highlighted-btn">Get Resume</button>
+            <button type="button" className="btn highlighted-btn">Get Resume</button>
           </a>
         </div>
       </div>
