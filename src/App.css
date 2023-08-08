@@ -18,3 +18,7 @@
   --toast-success: #0cbfae;
   --loader-color: #0cbfae;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
