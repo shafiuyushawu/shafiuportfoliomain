@@ -1,4 +1,4 @@
-import weather from '../../../assets/Projects/weather.jpg';
+import weather from '../../../assets/Projects/weatherf.png';
 
 const Weather = () => {
   const SCREEN_CONSTANTS = {
@@ -41,7 +41,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <button type="button" className="btn highlighted-btn">See Projects</button>
+            <button type="button" className="bnt highlighted-btn">See Projects</button>
           </div>
         </div>
       </div>

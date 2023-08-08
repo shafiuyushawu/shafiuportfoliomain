@@ -1,6 +1,6 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import bookstore from '../../../assets/Projects/bookstore.png';
 
-const Weather = () => {
+const BookStore = () => {
   const SCREEN_CONSTANTS = {
     description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
     highlights: {
@@ -19,12 +19,11 @@ const Weather = () => {
       <span className="project-stack">{value}</span>
     </div>
   ));
-
   return (
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={bookstore} alt="no internet" />
         </div>
         <div className="projects-me-details">
           <h3 className="project-heading">Online Tickets</h3>
@@ -48,4 +47,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default BookStore;

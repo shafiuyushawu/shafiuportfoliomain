@@ -1,40 +1,73 @@
-import React from 'react';
-import OwlCarousel from 'react-owl-carousel';
-import Weather from './Project/Weather';
-import OnlineTicket from './Project/OnlineTicket';
+import React, { useRef } from 'react';
+
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './Projects.css';
 
-const AboutMe = () => {
-  const options = {
-    loop: false,
-    margin: 0,
-    nav: true,
-    animateIn: 'bounceInRight',
-    animateOut: 'bounceOutRight',
-    dots: false,
-    autoplay: false,
-    smartSpeed: 1000,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
-  };
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
+import Weather from './Project/Weather';
+import OnlineTicket from './Project/OnlineTicket';
+import SpaceX from './Project/SpaceX';
+import BookStore from './Project/BookStore';
+import MovieGallery from './Project/MovieGallery';
+
+const AboutMe = () => {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
   return (
     <div className="projects-me-container screen-container">
       <div className="projects-me-parent">
         <ScreenHeading title="Projects" subHeading="Highlighted Personal Projects" />
-        <OwlCarousel classID="owl-carousel" id="testimonial-carousel" options={options}>
-          <Weather />
-          <OnlineTicket />
-        </OwlCarousel>
+        <>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides
+            autoplay={{
+              delay: 10500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <OnlineTicket />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Weather />
+            </SwiperSlide>
+            <SwiperSlide>
+              <SpaceX />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BookStore />
+            </SwiperSlide>
+            <SwiperSlide>
+              <MovieGallery />
+            </SwiperSlide>
+
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20" />
+              </svg>
+              <span ref={progressContent} />
+            </div>
+          </Swiper>
+        </>
       </div>
     </div>
   );
