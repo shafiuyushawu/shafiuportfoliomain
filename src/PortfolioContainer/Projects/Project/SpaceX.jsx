@@ -2,10 +2,12 @@ import space from '../../../assets/Projects/space-x.png';
 
 const SpaceX = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'A single page web application that provides a platform for scientists to get booked for reservations and join missions to space travel.',
     highlights: {
       bullets: [
         'React',
+        'React-Redux',
+        'React-Router-Dom',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -26,7 +28,7 @@ const SpaceX = () => {
           <img src={space} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Space Travelers</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -39,7 +41,19 @@ const SpaceX = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <button type="button" className="btn highlighted-btn">See Projects</button>
+            <a href="https://github.com/shafiuyushawu/space-travelers">
+              <button
+                type="button"
+                className="btn primary-btn"
+              >
+                See Source  📝
+              </button>
+            </a>
+            <a href="https://space-travelers-hub-kcp2.onrender.com/">
+              <button type="button" className="btn highlighted-btn">
+                Live Demo  🚀
+              </button>
+            </a>
           </div>
         </div>
       </div>

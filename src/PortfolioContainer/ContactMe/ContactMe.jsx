@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Typewriter from 'typewriter-effect';
 import {
   FaGithub, FaLinkedinIn, FaTwitter, FaAngellist,
@@ -8,8 +7,8 @@ import imgBack from '../../images/mailz.jpeg';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './ContactMe.css';
 
-const ContactMe = ({ id }) => (
-  <div className="main-container" id={id || ''}>
+const ContactMe = () => (
+  <div className="main-container">
     <ScreenHeading title="Contact Me" subHeading={"Let's Keep In Touch"} />
     <div className="central-form">
       <div className="contact-details">
@@ -76,8 +75,5 @@ const ContactMe = ({ id }) => (
     </div>
   </div>
 );
-ContactMe.propTypes = {
-  id: PropTypes.number.isRequired,
-};
 
 export default ContactMe;

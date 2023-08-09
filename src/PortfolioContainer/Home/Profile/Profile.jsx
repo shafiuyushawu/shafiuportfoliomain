@@ -66,7 +66,7 @@ const Profile = () => (
         <div className="profile-options">
           <button
             type="button"
-            className="btn primary-btn"
+            className="btn primary-btn bg-[ #1f2235]"
           >
 
             Hire Me

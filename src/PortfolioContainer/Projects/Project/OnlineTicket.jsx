@@ -5,7 +5,9 @@ const Weather = () => {
     description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
     highlights: {
       bullets: [
-        'React',
+        'HTML5',
+        'CSS3',
+        'JavaScript',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -40,7 +42,19 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <button type="button" className="btn highlighted-btn">See Projects</button>
+            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+              <button
+                type="button"
+                className="btn primary-btn"
+              >
+                See Source  📝
+              </button>
+            </a>
+            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
+              <button type="button" className="btn highlighted-btn">
+                Live Demo  🚀
+              </button>
+            </a>
           </div>
         </div>
       </div>

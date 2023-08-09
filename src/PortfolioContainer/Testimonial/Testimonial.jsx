@@ -1,4 +1,5 @@
 import React from 'react';
+
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -6,9 +7,9 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './Testimonial.css';
 
-import Wasiu from '../../assets/Recomendation/wasiu.jpg';
-import Alex from '../../assets/Recomendation/alex.jpg';
-import Amine from '../../assets/Recomendation/amine.jpg';
+import Wasiu from '../../assets/Testimonial/wasiu.jpg';
+import Alex from '../../assets/Testimonial/alex.jpg';
+import Amine from '../../assets/Testimonial/amine.jpg';
 
 const Testimonial = () => {
   const options = {

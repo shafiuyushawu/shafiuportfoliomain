@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* c */
+  padding: 3em;
 }
 
 .projects-profile {
@@ -28,7 +28,7 @@
 .projects-profile img {
   width: 100%;
   transition: transform 0.3s ease;
-  /* transform: scale(1.9); */
+  box-shadow: 0 0 1px 1px #1f2235;
 }
 
 .projects-profile img:hover {

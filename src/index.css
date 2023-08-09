@@ -79,15 +79,14 @@ body ::-webkit-scrollbar-thumb {
   background-color: hsla(0, 0%, 100%, 0.16);
 }
 
-/* ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
-::-webkit-scrollbar-track {
+ ::-webkit-scrollbar-track {
   background: hsla(0, 0%, 100%, 0.1);
-} */
+} 
 
-.btn {
+.btn-n {
   font-family: "Poppins SemiBold", sans-serif;
   border-radius: 50px;
   padding: 14px 0;
@@ -107,11 +106,11 @@ body ::-webkit-scrollbar-thumb {
   background-color: #1f2235;
 }
 
-/* @media only screen and (max-width: 414px) {
+ @media only screen and (max-width: 414px) {
   .primary-btn {
     font-size: 13px;
   }
-} */
+}
 
 .primary-btn:hover {
   color: aliceblue;

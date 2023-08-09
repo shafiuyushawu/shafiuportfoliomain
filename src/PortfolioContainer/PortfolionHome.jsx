@@ -10,8 +10,8 @@ const PortfolionHome = () => (
     <Home />
     <AboutMe />
     <Resume />
-    <Testimonial />
     <Projects />
+    <Testimonial />
     <ContactMe />
   </div>
 );

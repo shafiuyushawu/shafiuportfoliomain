@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './Projects.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,8 +9,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
-import Weather from './Project/Weather';
 import OnlineTicket from './Project/OnlineTicket';
+import Weather from './Project/Weather';
 import SpaceX from './Project/SpaceX';
 import BookStore from './Project/BookStore';
 import MovieGallery from './Project/MovieGallery';
@@ -28,7 +26,7 @@ const AboutMe = () => {
     <div className="projects-me-container screen-container">
       <div className="projects-me-parent">
         <ScreenHeading title="Projects" subHeading="Highlighted Personal Projects" />
-        <>
+        <div className="about-me-card">
           <Swiper
             spaceBetween={30}
             centeredSlides
@@ -67,7 +65,7 @@ const AboutMe = () => {
               <span ref={progressContent} />
             </div>
           </Swiper>
-        </>
+        </div>
       </div>
     </div>
   );

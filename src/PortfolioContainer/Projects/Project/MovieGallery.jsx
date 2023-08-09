@@ -2,10 +2,12 @@ import moviegallery from '../../../assets/Projects/moviegallery.png';
 
 const MovieGallery = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'A single page app that displays a list of TV series, where users can react to each series by liking or commenting on it.',
     highlights: {
       bullets: [
-        'React',
+        'HTML5',
+        'CSS3',
+        'JavaScript',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -26,7 +28,7 @@ const MovieGallery = () => {
           <img src={moviegallery} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Movie Gallery</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -39,7 +41,19 @@ const MovieGallery = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <button type="button" className="btn highlighted-btn">See Projects</button>
+            <a href="https://github.com/shafiuyushawu/movie-gallery">
+              <button
+                type="button"
+                className="btn primary-btn"
+              >
+                See Source  📝
+              </button>
+            </a>
+            <a href="https://maov19.github.io/javascript-capstone/dist/">
+              <button type="button" className="btn highlighted-btn">
+                Live Demo  🚀
+              </button>
+            </a>
           </div>
         </div>
       </div>

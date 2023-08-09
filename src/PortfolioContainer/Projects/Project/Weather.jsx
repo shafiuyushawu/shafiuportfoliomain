@@ -41,7 +41,19 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <button type="button" className="bnt highlighted-btn">See Projects</button>
+            <a href="https://github.com/shafiuyushawu/weather-app">
+              <button
+                type="button"
+                className="btn primary-btn"
+              >
+                See Source  📝
+              </button>
+            </a>
+            <a href="https://weather-app-r266.onrender.com/">
+              <button type="button" className="btn highlighted-btn">
+                Live Demo  🚀
+              </button>
+            </a>
           </div>
         </div>
       </div>
