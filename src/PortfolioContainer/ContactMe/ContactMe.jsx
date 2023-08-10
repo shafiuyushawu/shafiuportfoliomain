@@ -8,7 +8,7 @@ import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './ContactMe.css';
 
 const ContactMe = () => (
-  <div className="main-container">
+  <div className="main-container" id="contactme">
     <ScreenHeading title="Contact Me" subHeading={"Let's Keep In Touch"} />
     <div className="central-form">
       <div className="contact-details">

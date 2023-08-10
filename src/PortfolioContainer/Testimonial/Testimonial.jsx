@@ -35,7 +35,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div>
+    <div id="testimonial">
       <ScreenHeading title="Recomendation" subHeading="What My Superior Say About Me" />
       <section className="testimonial-section">
         <div className="container">

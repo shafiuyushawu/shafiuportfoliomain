@@ -25,7 +25,7 @@ const AboutMe = () => {
   ));
 
   return (
-    <div className="about-me-container screen-container">
+    <div className="about-me-container screen-container" id="aboutme">
       <div className="about-me-parent">
         <ScreenHeading title="About Me" subHeading="Why Choose Me?" />
         <div className="about-me-card">

@@ -30,6 +30,7 @@ const Resume = () => {
             bullet.id === selectedBulletIndex ? 'bullet selected-bullet' : 'bullet'
           }
       key={bullet.id}
+      id="resume"
     >
       <img
         className="bullet-logo"
@@ -52,7 +53,7 @@ const Resume = () => {
   );
 
   return (
-    <div className="resume-container screen-container ">
+    <div className="resume-container screen-container " id="resume">
       <div className="resume-content">
         <ScreenHeading title="Resume" subHeading="My formal Bio Details" />
         <div className="resume-card">

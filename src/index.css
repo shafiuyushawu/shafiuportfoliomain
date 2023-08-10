@@ -125,6 +125,9 @@ body ::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 568px) {
+  .move_home .move_home_icon { 
+    font-size: 3em;
+  }
   .highlighted-btn {
     z-index: -900;
   }
@@ -139,3 +142,23 @@ body ::-webkit-scrollbar-thumb {
   transform: translateY(80px);
   transition: all 0.8s ease;
 }
+
+.move_home {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.move_home .move_home_icon {
+  font-size: 2em; 
+  color: #ff5823;
+}
+
+.move_home .move_home_icon:hover {
+  font-size: 2.1em;
+}
+

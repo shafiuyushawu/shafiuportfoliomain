@@ -1,3 +1,5 @@
+import { PiArrowCircleUpBold } from 'react-icons/pi';
+import { Link } from 'react-scroll';
 import Home from './Home/Home';
 import AboutMe from './AboutMe/AboutMe';
 import Resume from './Resume/Resume';
@@ -13,6 +15,9 @@ const PortfolionHome = () => (
     <Projects />
     <Testimonial />
     <ContactMe />
+    <Link to="home" smooth duration={500} className="move_home">
+      <PiArrowCircleUpBold className="move_home_icon" />
+    </Link>
   </div>
 );
 

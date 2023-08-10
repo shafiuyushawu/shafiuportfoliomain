@@ -23,7 +23,7 @@ const AboutMe = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="projects-me-container screen-container">
+    <div className="projects-me-container screen-container" id="projects">
       <div className="projects-me-parent">
         <ScreenHeading title="Projects" subHeading="Highlighted Personal Projects" />
         <div className="about-me-card">
