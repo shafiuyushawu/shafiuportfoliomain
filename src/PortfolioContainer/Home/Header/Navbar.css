@@ -1,0 +1,18 @@
+.navbar {
+  font-family: 'Poppins SemiBold';
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 24px 0 ;
+}
+
+.togle_close {
+  color: white;
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  flex-direction: column;
+  display: none;
+  background-color: #1f2235;
+} 
