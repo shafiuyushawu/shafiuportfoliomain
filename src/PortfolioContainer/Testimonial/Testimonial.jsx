@@ -1,5 +1,4 @@
 import React from 'react';
-
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -40,16 +39,18 @@ const Testimonial = () => {
       <section className="testimonial-section">
         <div className="container">
           <div className="row">
-            <OwlCarousel classID="owl-carousel" id="testimonial-carousel" options={options}>
+            {/* eslint-disable-next-line react/jsx-props-no-spreading  */}
+            <OwlCarousel dotsClass="owl-dots" classID="owl-carousel" id="testimonial-carousel" {...options}>
               <div className="col-lg-12">
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
                       I had the pleasure of working with Shafiu
-                      on several projects,and I must say that he
-                      played a vital role in ensuring our success in each project.
-                      Shafiu is an exceptional communicator and has a keen eye for detail.
+                      on several projects, and I must say that he played
+                      a vital role in ensuring our success in each project.
+                      Shafiu is an exceptional communicator and has a
+                      keen eye for detail.
                       <i className="fa fa-quote-right" />
                       <br />
                       <a href="https://www.linkedin.com/in/shafiuyushawu/">See more</a>
@@ -85,10 +86,10 @@ const Testimonial = () => {
                     <p>
                       <i className="fa fa-quote-left" />
                       I am writing to highly recommend Shafiu Ibn Yushawu
-                      for the software engineering position
-                      in your organization. I have had the pleasure of working with
-                      Shafiu for several years, and he has consistently demonstrated
-                      exceptional skills and dedication to his work.
+                      for the software engineering position in your organization.
+                      I have had the pleasure of working with Shafiu for several years,
+                      and he has consistently demonstrated exceptional
+                      skills and dedication to his work.
                       <i className="fa fa-quote-right" />
                       <br />
                       <a href="https://www.linkedin.com/in/shafiuyushawu/">See more</a>
@@ -123,12 +124,11 @@ const Testimonial = () => {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I am writing to highly recommend Shafiu Ibn
-                      Yushawu for any future professional opportunities.
-                      I had the pleasure of working with him as a student at
-                      Microverse for collaborative projects, during which time
-                      he consistently impressed me with his knowledge,
-                      work ethic, and positive attitude.
+                      I am writing to highly recommend Shafiu Ibn Yushawu
+                      for any future professional opportunities. I had the
+                      pleasure of working with him as a student at Microverse
+                      for collaborative projects, during which time he consistently
+                      impressed me with his knowledge, work ethic, and positive attitude.
                       <i className="fa fa-quote-right" />
                       <br />
                       <a href="https://www.linkedin.com/in/shafiuyushawu/">See more</a>
