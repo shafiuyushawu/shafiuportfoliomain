@@ -10,14 +10,17 @@ export const resumeBullets = [
 
 const programmingSkillsDetails = [
   { id: 1, skill: 'JavaScript', ratingPercentage: 90 },
-  { id: 2, skill: 'React JS', ratingPercentage: 90 },
+  { id: 2, skill: 'React JS', ratingPercentage: 93 },
   { id: 3, skill: 'React Native', ratingPercentage: 65 },
-  { id: 4, skill: 'Express JS', ratingPercentage: 40 },
-  { id: 5, skill: 'Node JS', ratingPercentage: 30 },
-  { id: 6, skill: 'Mongo Db', ratingPercentage: 20 },
-  { id: 7, skill: 'Tailwind CSS & Daisy UI', ratingPercentage: 95 },
-  { id: 8, skill: 'HTML', ratingPercentage: 97 },
-  { id: 9, skill: 'CSS', ratingPercentage: 95 },
+  { id: 4, skill: 'Ruby', ratingPercentage: 91 },
+  { id: 5, skill: 'Ruby on Rails', ratingPercentage: 40 },
+  { id: 6, skill: 'Python', ratingPercentage: 80 },
+  { id: 7, skill: 'Express JS', ratingPercentage: 40 },
+  { id: 8, skill: 'Node JS', ratingPercentage: 30 },
+  { id: 9, skill: 'Mongo Db', ratingPercentage: 20 },
+  { id: 10, skill: 'Tailwind CSS & Daisy UI', ratingPercentage: 95 },
+  { id: 11, skill: 'HTML', ratingPercentage: 97 },
+  { id: 12, skill: 'CSS', ratingPercentage: 95 },
 ];
 
 export const projectsDetails = [
