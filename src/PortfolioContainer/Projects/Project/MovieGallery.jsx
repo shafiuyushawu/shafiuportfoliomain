@@ -1,8 +1,8 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import moviegallery from '../../../assets/Projects/moviegallery.png';
 
-const Weather = () => {
+const MovieGallery = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'A single page app that displays a list of TV series, where users can react to each series by liking or commenting on it.',
     highlights: {
       bullets: [
         'HTML5',
@@ -21,15 +21,14 @@ const Weather = () => {
       <span className="project-stack">{value}</span>
     </div>
   ));
-
   return (
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={moviegallery} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Movie Gallery</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -42,7 +41,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+            <a href="https://github.com/shafiuyushawu/movie-gallery">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,7 +49,7 @@ const Weather = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
+            <a href="https://maov19.github.io/javascript-capstone/dist/">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>
@@ -62,4 +61,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default MovieGallery;

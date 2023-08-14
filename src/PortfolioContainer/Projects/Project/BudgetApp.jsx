@@ -1,13 +1,12 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import budget from '../../../assets/Projects/budget1.png';
 
-const Weather = () => {
+const BudgetApp = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'Budget App is a web-based budgeting application built using Ruby on Rails and PostgreSQL. With Budget app, users can effortlessly track their income and expenses, gaining full control over their finances.',
     highlights: {
       bullets: [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
+        'Ruby on Rails',
+        'PostgreSQL',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -26,10 +25,10 @@ const Weather = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={budget} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Movie Gallery</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -42,7 +41,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+            <a href="https://github.com/shafiuyushawu/budget-app">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,7 +49,7 @@ const Weather = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
+            <a href="https://budget-app-03mn.onrender.com/">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>
@@ -62,4 +61,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default BudgetApp;

@@ -1,0 +1,87 @@
+.navbar {
+  font-family: 'Poppins SemiBold';
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px 0;
+  width: 100%;
+}
+
+.home_icon {
+  cursor: pointer;
+  font-size: 5em;
+}
+
+.nav_icon {
+  cursor: pointer;
+  display: none;
+  background-color: #1f2235;
+  border: none;
+}
+
+.nav_menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+.nav_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav_menu li {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav_menu li:hover {
+  color: var(--dark-orange);
+}
+
+.show {
+  display: flex;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #1f2235;
+  width: 100%;
+}
+
+.icon_m {
+  font-size: 2.5em;
+  background-color: white;
+}
+
+@media screen and (max-width: 910px) {
+  .nav_icon {
+    cursor: pointer;
+    display: block;
+  }
+
+  .nav_menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #1f2235;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav_menu ul {
+    flex-direction: column;
+    font-size: 3em;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .nav_menu.show {
+    display: flex; /* Display the menu items when the icon is clicked */
+  }
+}

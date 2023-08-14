@@ -1,13 +1,13 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import space from '../../../assets/Projects/space-x.png';
 
-const Weather = () => {
+const SpaceX = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'A single page web application that provides a platform for scientists to get booked for reservations and join missions to space travel.',
     highlights: {
       bullets: [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
+        'React',
+        'React-Redux',
+        'React-Router-Dom',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -21,15 +21,14 @@ const Weather = () => {
       <span className="project-stack">{value}</span>
     </div>
   ));
-
   return (
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={space} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Space Travelers</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -42,7 +41,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+            <a href="https://github.com/shafiuyushawu/space-travelers">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,7 +49,7 @@ const Weather = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
+            <a href="https://space-travelers-hub-kcp2.onrender.com/">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>
@@ -62,4 +61,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default SpaceX;

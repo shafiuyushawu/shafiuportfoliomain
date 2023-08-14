@@ -1,57 +1,86 @@
-import React, { useEffect } from 'react'
-import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading'
-import ScrollService from '../../utilities/ScrollService'
-import Animations from '../../utilities/Animations';
+import React, { useRef } from 'react';
 
-import './Projects.css'
+import './Projects.css';
 
-import OwlCarousel from 'react-owl-carousel'
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Weather from './Project/Weather'
-import OnlineTicket from './Project/OnlineTicket'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
+import OnlineTicket from './Project/OnlineTicket';
+import Weather from './Project/Weather';
+import SpaceX from './Project/SpaceX';
+import BookStore from './Project/BookStore';
+import MovieGallery from './Project/MovieGallery';
+import BudgetApp from './Project/BudgetApp';
+import BookingCar from './Project/BookingCar';
+import RecipeApp from './Project/RecipeApp';
 
-const AboutMe = (props) => {
-
-
-
-  let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return
-    Animations.animations.fadeInScreen(props.id)
-  }
-  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
-
-  const options = {
-    loop: false,
-    margin: 0,
-    nav: true,
-    animateIn: "bounceInRight",
-    animateOut: "bounceOutRight",
-    dots: false,
-    autoplay: false,
-    smartSpeed: 1000,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
+const AboutMe = () => {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-
   return (
-    <div className="projects-me-container screen-container" id={props.id || ""}>
+    <div className="projects-me-container screen-container" id="projects">
       <div className="projects-me-parent">
-        <ScreenHeading title={"Projects"} subHeading={"Highlighted Personal Projects"} />
-        <OwlCarousel classID='owl-carousel' id='testimonial-carousel' {...options}>
-          <Weather />
-          <OnlineTicket />
-        </OwlCarousel>
+        <ScreenHeading title="Projects" subHeading="Highlighted Personal Projects" />
+        <div className="about-me-card">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides
+            autoplay={{
+              delay: 10500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <BookingCar />
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeApp />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BudgetApp />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Weather />
+            </SwiperSlide>
+            <SwiperSlide>
+              <SpaceX />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BookStore />
+            </SwiperSlide>
+            <SwiperSlide>
+              <MovieGallery />
+            </SwiperSlide>
+            <SwiperSlide>
+              <OnlineTicket />
+            </SwiperSlide>
+
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20" />
+              </svg>
+              <span ref={progressContent} />
+            </div>
+          </Swiper>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

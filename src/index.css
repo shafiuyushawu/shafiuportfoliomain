@@ -52,15 +52,21 @@
 }
 
 body {
+  font-family: "Poppins Regular", sans-serif;
   margin: 0;
-  overflow-y: overlay;
-  font-family: "Poppins Regular";
+
+  /* overflow-y: overlay; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Courier New",
     monospace;
 }
 
@@ -81,13 +87,13 @@ body ::-webkit-scrollbar-thumb {
   background: hsla(0, 0%, 100%, 0.1);
 }
 
-.btn {
+.btn-n {
+  font-family: "Poppins SemiBold", sans-serif;
   border-radius: 50px;
   padding: 14px 0;
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
-  font-family: "Poppins SemiBold";
 }
 
 .btn:active {
@@ -100,11 +106,12 @@ body ::-webkit-scrollbar-thumb {
   font-size: 12px;
   background-color: #1f2235;
 }
-/* @media only screen and (max-width: 414px) {
+
+@media only screen and (max-width: 414px) {
   .primary-btn {
     font-size: 13px;
   }
-} */
+}
 
 .primary-btn:hover {
   color: aliceblue;
@@ -114,11 +121,15 @@ body ::-webkit-scrollbar-thumb {
 
 .highlighted-btn {
   color: var(--white);
-
   font-size: 12px;
   background-color: #ff5823;
 }
+
 @media only screen and (max-width: 568px) {
+  .move_home .move_home_icon {
+    font-size: 3em;
+  }
+
   .highlighted-btn {
     z-index: -900;
   }
@@ -132,4 +143,23 @@ body ::-webkit-scrollbar-thumb {
   opacity: 0;
   transform: translateY(80px);
   transition: all 0.8s ease;
+}
+
+.move_home {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.move_home .move_home_icon {
+  font-size: 2em;
+  color: #ff5823;
+}
+
+.move_home .move_home_icon:hover {
+  font-size: 2.1em;
 }

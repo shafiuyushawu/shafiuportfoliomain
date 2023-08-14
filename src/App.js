@@ -1,12 +1,17 @@
 import './App.css';
-import PortfolioContainer from './PortfolioContainer/PortfolioContainer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PortfolionHome from './PortfolioContainer/PortfolionHome';
+import Resume from './PortfolioContainer/Resume/Resume';
 
-function App() {
-  return (
-    <div>
-      <PortfolioContainer />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<PortfolionHome />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </Router>
+  </div>
+);
 
 export default App;

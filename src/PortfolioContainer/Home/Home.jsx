@@ -1,17 +1,21 @@
-import React from 'react'
-import Header from './Header/Header'
-import Profile from './Profile/Profile'
-import Footer from './Footer/Footer'
-import './Home.css'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Home = () => {
-  return (
-    <div className='home-container'>
-        <Header />
-        <Profile />
-        <Footer />
-    </div>
-  )
-}
+import Navbar from './Header/Navbar';
+import Profile from './Profile/Profile';
+import Footer from './Footer/Footer';
+import './Home.css';
 
-export default Home
+const Home = ({ id }) => (
+  <div className="home-container" id="home">
+    <Navbar id={id} />
+    <Profile />
+    <Footer />
+  </div>
+);
+
+Home.propTypes = {
+  id: PropTypes.string.isRequired,
+};
+
+export default Home;

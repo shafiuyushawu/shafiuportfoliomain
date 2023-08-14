@@ -1,13 +1,12 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import recipe from '../../../assets/Projects/recipe.png';
 
-const Weather = () => {
+const RecipeApp = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'Recipe App is a rails app which lets users add their favorite food, recipe, and it also alow them to shop for missing ingredient from the recipe.',
     highlights: {
       bullets: [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
+        'Ruby on Rails',
+        'PostgreSQL',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -26,10 +25,10 @@ const Weather = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={recipe} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Movie Gallery</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -42,7 +41,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+            <a href="https://github.com/shafiuyushawu/recipe-app">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,11 +49,9 @@ const Weather = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
-              <button type="button" className="btn highlighted-btn">
-                Live Demo  🚀
-              </button>
-            </a>
+            <button disabled type="button" className="btn highlighted-btn">
+              Live, Soon!
+            </button>
           </div>
         </div>
       </div>
@@ -62,4 +59,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default RecipeApp;

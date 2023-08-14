@@ -1,110 +1,204 @@
 .projects-me-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0;
+  height: 100vh;
 }
 
 .projects-me-parent {
-    max-width: 1000px;
-    width: 70%;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .projects-me-card {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    box-shadow: 0 0px 20px -2px #1f2235;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 3em;
 }
 
 .projects-profile {
-    width: 70%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
 .projects-profile img {
-    width: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 1px 1px #1f2235;
+}
+
+.projects-profile img:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 20px 5px #1f2235;
 }
 
 .project-stack {
-    display: flex;
+  display: flex;
 }
 
 .projects-me-details {
-    width: 48%;
-    text-align: justify;
-    padding: 30px;
+  width: 48%;
+  text-align: justify;
+  padding: 0 0 0 15px;
 }
 
 .project-heading {
-    color: var(--dark-orange);
-    font-size: 20px;
-    font-family: "Poppins SemiBold";
+  color: var(--dark-orange);
+  font-size: 20px;
+  font-family: "Poppins SemiBold";
 }
 
 .projects-me-description {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .projects-me-highlights {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
 .highlght-heading {
-    font-family: "Poppins Bold";
-    font-size: 14px;
-    margin: 0 0 5px 0;
+  font-family: "Poppins Bold";
+  font-size: 14px;
+  margin: 0 0 5px 0;
 }
 
 .highlight {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-    font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 12px;
 }
 
 .highlight-blob {
-    height: 12px;
-    width: 12px;
-    margin: 0 10px 0 0;
-    background-color: #ff5823;
-    border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  margin: 0 10px 0 0;
+  background-color: #ff5823;
+  border-radius: 50%;
 }
 
 .projects-me-options .highlighted-btn {
-    margin: 0 0 0 30px;
+  margin: 0 0 0 30px;
 }
 
-/*IPAD PRO RESPONSIVENESS*/
+/* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
-    .projects-me-card {
-        flex-direction: column;
-    }
+  .projects-me-card {
+    flex-direction: column;
+  }
 
-    .projects-me-parent {
-        width: 88%;
-    }
+  .projects-me-parent {
+    width: 88%;
+  }
 }
 
 @media only screen and (max-width: 898px) {
-    .projects-me-details {
-        width: 100%;
-    }
+  .projects-me-details {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 466px) {
-    .projects-me-options {
-        display: flex;
-        flex-direction: column;
-    }
+  .projects-me-options {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .projects-me-options .highlighted-btn {
-        margin: 24px 0 0 0 !important;
-    }
+  .projects-me-options .highlighted-btn {
+    margin: 24px 0 0 0 !important;
+  }
 
-    .projects-me-options button {
-        width: 100%;
-    }
+  .projects-me-options button {
+    width: 100%;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ff5823;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #ff5823;
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.swiper-button-prev {
+  background-color: #ff5823;
+  color: #333;
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Style for the next button */
+.swiper-button-next {
+  background-color: #ff5823;
+  color: #ff5823;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #ff5823;
+  color: #fff;
 }

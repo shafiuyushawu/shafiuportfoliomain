@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
   min-height: fit-content;
   margin: 120px 0;
 }
@@ -11,6 +12,7 @@
   display: flex;
   height: 360px;
   width: 1000px;
+
   /* margin: 80px 0; */
 }
 
@@ -187,6 +189,10 @@
 
 /* IPAD PRO RESPONSIVENESS */
 @media only screen and (max-width: 1110px) {
+  .resume-container {
+    height: 100%;
+  }
+
   .resume-card {
     width: 880px;
   }
@@ -198,7 +204,6 @@
 
 /* IPAD RESPONSIVENESS */
 @media only screen and (max-width: 1023px) {
-
   .heading-date {
     font-size: 11px;
   }

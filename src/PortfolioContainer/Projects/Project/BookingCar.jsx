@@ -1,13 +1,14 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import bookingcar from '../../../assets/Projects/bookingcar.png';
 
-const Weather = () => {
+const BookingCar = () => {
   const SCREEN_CONSTANTS = {
-    description: 'This is an online ticketing page that basically allows users to book ticket for shows, programs, etc.. and also exhibit gallery of past events.',
+    description: 'Book vehicle rental frontend is a frontend react app for our book vehicle rental backend. It shows the features of the app and provides a user with better experience and interface.',
     highlights: {
       bullets: [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
+        'Ruby on Rails',
+        'PostgreSQL',
+        'Redux',
+        'React-Router-Dom',
         'Tailwind CSS',
         'Daisy UI ',
       ],
@@ -26,10 +27,10 @@ const Weather = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={bookingcar} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h3 className="project-heading">Movie Gallery</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -42,7 +43,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+            <a href="https://github.com/shafiuyushawu/book_vehicle_rental-frontend">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,11 +51,9 @@ const Weather = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
-              <button type="button" className="btn highlighted-btn">
-                Live Demo  🚀
-              </button>
-            </a>
+            <button disabled type="button" className="btn highlighted-btn">
+              Live, Soon!
+            </button>
           </div>
         </div>
       </div>
@@ -62,4 +61,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default BookingCar;
