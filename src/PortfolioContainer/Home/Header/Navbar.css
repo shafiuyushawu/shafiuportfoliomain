@@ -15,7 +15,7 @@
 
 .nav_icon {
   cursor: pointer;
-  display: none; 
+  display: none;
   background-color: #1f2235;
   border: none;
 }
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  display: flex; 
+  display: flex;
 }
 
 .nav_menu ul {
@@ -61,7 +61,7 @@
 @media screen and (max-width: 910px) {
   .nav_icon {
     cursor: pointer;
-    display: block; 
+    display: block;
   }
 
   .nav_menu {
@@ -71,12 +71,12 @@
     background-color: #1f2235;
     width: 100%;
     flex-direction: column;
-    display: none; 
+    display: none;
   }
 
   .nav_menu ul {
     flex-direction: column;
-    font-size: 3em; 
+    font-size: 3em;
     height: 100%;
     z-index: 1;
   }

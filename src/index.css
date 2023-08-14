@@ -82,9 +82,10 @@ body ::-webkit-scrollbar-thumb {
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
 }
- ::-webkit-scrollbar-track {
+
+::-webkit-scrollbar-track {
   background: hsla(0, 0%, 100%, 0.1);
-} 
+}
 
 .btn-n {
   font-family: "Poppins SemiBold", sans-serif;
@@ -106,7 +107,7 @@ body ::-webkit-scrollbar-thumb {
   background-color: #1f2235;
 }
 
- @media only screen and (max-width: 414px) {
+@media only screen and (max-width: 414px) {
   .primary-btn {
     font-size: 13px;
   }
@@ -125,9 +126,10 @@ body ::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width: 568px) {
-  .move_home .move_home_icon { 
+  .move_home .move_home_icon {
     font-size: 3em;
   }
+
   .highlighted-btn {
     z-index: -900;
   }
@@ -154,11 +156,10 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .move_home .move_home_icon {
-  font-size: 2em; 
+  font-size: 2em;
   color: #ff5823;
 }
 
 .move_home .move_home_icon:hover {
   font-size: 2.1em;
 }
-

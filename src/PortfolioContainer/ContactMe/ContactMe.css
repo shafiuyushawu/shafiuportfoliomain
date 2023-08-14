@@ -1,6 +1,6 @@
 .main-container {
   min-height: 100vh;
-  
+
   /* background-image: url("../../assets/ContactMe/contact_us.jpeg"); */
 
   margin: 100px 0 -450px 0;
@@ -132,10 +132,13 @@ form button:hover {
   /* border: 2px solid #1f2235; */
 }
 
+/* lint-ignore-start */
 button .load img {
   width: 60px;
   color: green;
 }
+
+/* lint-ignore-end */
 
 button .load {
   width: 100%;
