@@ -26,7 +26,7 @@ const Weather = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={onlineticket} alt="no internet" />
+          <img src={onlineticket} alt="no internet" width="100%" height="100%" />
         </div>
         <div className="projects-me-details">
           <h2 className="project-heading">Online Tickets</h2>
