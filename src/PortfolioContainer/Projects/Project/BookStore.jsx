@@ -25,7 +25,7 @@ const BookStore = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={bookstore} alt="no internet" width="100%" height="100%" />
+          <img src={bookstore} alt="no internet" width="70%" height="70%" />
         </div>
         <div className="projects-me-details">
           <h2 className="project-heading">BookStore</h2>

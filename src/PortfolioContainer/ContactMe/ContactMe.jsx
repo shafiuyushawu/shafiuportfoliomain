@@ -3,7 +3,7 @@ import {
   FaGithub, FaLinkedinIn, FaTwitter, FaAngellist,
 } from 'react-icons/fa';
 import { SiMedium } from 'react-icons/si';
-import imgBack from '../../images/mailz.jpeg';
+import imgBack from '../../images/mailz.webp';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './ContactMe.css';
 

@@ -6,9 +6,9 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './Testimonial.css';
 
-import Wasiu from '../../assets/Testimonial/wasiu.jpg';
-import Alex from '../../assets/Testimonial/alex.jpg';
-import Amine from '../../assets/Testimonial/amine.jpg';
+import Wasiu from '../../assets/Testimonial/wasiu.webp';
+import Alex from '../../assets/Testimonial/alex.webp';
+import Amine from '../../assets/Testimonial/amine.webp';
 
 const Testimonial = () => {
   const options = {
