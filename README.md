@@ -3,9 +3,6 @@
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <br/>
-
-  <h3><b>CAPSTONE - WEATHER APP</b></h3>
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -32,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Daily Weather Conditions <a name="todo-list"></a>
+# 📖 PORTFOLIO <a name="todo-list"></a>
 
 > A personal portfolio website that describes the qualities of me as a Software Engineer, the technologies I am familiar with. The web page is still in it youthful stage starting mobile version.
 
