@@ -28,7 +28,7 @@ const BudgetApp = () => {
           <img src={budget} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Movie Gallery</h3>
+          <h3 className="project-heading">Budget</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}

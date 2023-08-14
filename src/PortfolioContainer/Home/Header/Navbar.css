@@ -6,6 +6,7 @@
   align-items: center;
   padding: 10px 24px 0;
   width: 100%;
+  background-color: #1f2235;
 }
 
 .home_icon {
@@ -82,6 +83,6 @@
   }
 
   .nav_menu.show {
-    display: flex; /* Display the menu items when the icon is clicked */
+    display: flex;
   }
 }

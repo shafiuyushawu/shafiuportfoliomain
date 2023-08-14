@@ -1,5 +1,6 @@
 .profile-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -11,6 +12,13 @@
   display: flex;
   align-items: center;
   color: aliceblue;
+}
+.bio {
+  text-align: justify;
+}
+
+.profile-detail {
+  padding: 0 24px 0 24px;
 }
 
 .profile-details-name {
@@ -36,9 +44,8 @@
 .highlighted-text {
   color: var(--dark-orange);
 }
-
 .profile-role-tagline {
-  font-size: 19px;
+  font-size: 14px;
   margin: 5px 0 0 0;
   font-family: 'Poppins Light';
 }
