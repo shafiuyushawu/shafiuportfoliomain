@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import './Profile.css';
 import {
@@ -64,15 +64,17 @@ const Profile = () => (
         </div>
 
         <div className="profile-options">
-          <button
-            type="button"
-            className="btn primary-btn bg-[ #1f2235]"
-          >
+          <Link to="contactme" smooth duration={500}>
+            <button
+              type="button"
+              className="btn primary-btn bg-[ #1f2235]"
+            >
 
-            Hire Me
-            {' '}
+              Hire Me
+              {' '}
 
-          </button>
+            </button>
+          </Link>
           <a href={resume} download="Shafiu Ibn Yushawu.pdf">
             <button type="button" className="btn highlighted-btn">Get Resume</button>
           </a>
