@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Go Live 😊](https://weather-app-r266)
+[Go Live 😊](https://shafiuportfoliomain-5nx3k2qz4-ibnsco.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
