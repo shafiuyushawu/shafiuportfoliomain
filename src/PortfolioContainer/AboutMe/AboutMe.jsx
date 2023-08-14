@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import ScreenHeading from '../../utilities/ScreeenHeading/ScreenHeading';
 import './AboutMe.css';
 import resume from '../../assets/Home/Shafiu.pdf';
@@ -41,15 +42,17 @@ const AboutMe = () => {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button
-                type="button"
-                className="btn primary-btn"
-              >
-                {/* onClick={() => ScrollService.scrollHandler.scrollToHireMe()} */}
-                {' '}
-                Hire Me
-                {' '}
-              </button>
+              <Link to="contactme" smooth duration={500}>
+                <button
+                  type="button"
+                  className="btn primary-btn bg-[ #1f2235]"
+                >
+
+                  Hire Me
+                  {' '}
+
+                </button>
+              </Link>
               <a href={resume} download="Shafiu's.pdf">
                 <button type="button" className="btn highlighted-btn">Get Resume</button>
               </a>
