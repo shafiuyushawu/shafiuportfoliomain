@@ -6,6 +6,7 @@
   justify-content: center;
   height: 10%;
   min-height: fit-content;
+  margin:100px 100px 0 100px;
 }
 
 .profile-parent {
@@ -154,6 +155,10 @@
 }
 
 @media screen and (max-width: 375x) {
+  .profile-container {
+    margin: 0 0 0 0;
+  }
+
   .profile-picture {
     height: 275px;
     width: 275px;
