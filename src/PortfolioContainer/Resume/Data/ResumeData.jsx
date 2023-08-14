@@ -6,8 +6,7 @@ export const resumeBullets = [
   { id: 2, label: 'Skills (Front End and Testing)', logoSrc: 'programming-skills.svg' },
   { id: 3, label: 'Skills (Back End and Testing)', logoSrc: 'programming-skills.svg' },
   { id: 4, label: 'Skills (Tools and Professional)', logoSrc: 'programming-skills.svg' },
-  { id: 5, label: 'Projects', logoSrc: 'projects.svg' },
-  { id: 6, label: 'Interests', logoSrc: 'interests.svg' },
+  { id: 5, label: 'Interests', logoSrc: 'interests.svg' },
 ];
 
 const frontend = [
@@ -198,23 +197,23 @@ export const resumeDetails = [
     ))}
   </div>,
 
-  /* PROJECTS */
-  <div className="resume-screen-container" key="projects">
-    {projectsDetails.map((projectsDetails) => (
-      <>
-        <ResumeHeading
-          key={projectsDetails.id}
-          heading={projectsDetails.title}
-          subHeading={projectsDetails.subHeading}
-          description={projectsDetails.description}
-          fromDate={projectsDetails.duration.fromDate}
-          toDate={projectsDetails.duration.toDate}
-          link={projectsDetails.link}
-          live={projectsDetails.live}
-        />
-      </>
-    ))}
-  </div>,
+  // /* PROJECTS */
+  // <div className="resume-screen-container" key="projects">
+  //   {projectsDetails.map((projectsDetails) => (
+  //     <>
+  //       <ResumeHeading
+  //         key={projectsDetails.id}
+  //         heading={projectsDetails.title}
+  //         subHeading={projectsDetails.subHeading}
+  //         description={projectsDetails.description}
+  //         fromDate={projectsDetails.duration.fromDate}
+  //         toDate={projectsDetails.duration.toDate}
+  //         link={projectsDetails.link}
+  //         live={projectsDetails.live}
+  //       />
+  //     </>
+  //   ))}
+  // </div>,
 
   /* Interests */
   <div className="resume-screen-container" key="interests">

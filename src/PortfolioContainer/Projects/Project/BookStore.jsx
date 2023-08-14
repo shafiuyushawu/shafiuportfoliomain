@@ -41,7 +41,7 @@ const BookStore = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/bookstore">
+            <a href="https://github.com/shafiuyushawu/bookstore" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,7 +50,7 @@ const BookStore = () => {
               </button>
             </a>
             <a href="https://bookshop-3fwx.onrender.com/">
-              <button type="button" className="btn highlighted-btn">
+              <button type="button" className="btn highlighted-btn" target="_blank" rel="noopener noreferrer">
                 Live Demo  🚀
               </button>
             </a>
