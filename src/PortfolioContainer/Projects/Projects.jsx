@@ -14,6 +14,9 @@ import Weather from './Project/Weather';
 import SpaceX from './Project/SpaceX';
 import BookStore from './Project/BookStore';
 import MovieGallery from './Project/MovieGallery';
+import BudgetApp from './Project/BudgetApp';
+import BookingCar from './Project/BookingCar';
+import RecipeApp from './Project/RecipeApp';
 
 const AboutMe = () => {
   const progressCircle = useRef(null);
@@ -43,7 +46,13 @@ const AboutMe = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <OnlineTicket />
+              <BookingCar />
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecipeApp />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BudgetApp />
             </SwiperSlide>
             <SwiperSlide>
               <Weather />
@@ -56,6 +65,9 @@ const AboutMe = () => {
             </SwiperSlide>
             <SwiperSlide>
               <MovieGallery />
+            </SwiperSlide>
+            <SwiperSlide>
+              <OnlineTicket />
             </SwiperSlide>
 
             <div className="autoplay-progress" slot="container-end">
