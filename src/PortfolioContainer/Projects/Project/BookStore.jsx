@@ -49,8 +49,8 @@ const BookStore = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://bookshop-3fwx.onrender.com/">
-              <button type="button" className="btn highlighted-btn" target="_blank" rel="noopener noreferrer">
+            <a href="https://bookshop-3fwx.onrender.com/" target="_blank" rel="noopener noreferrer">
+              <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>
             </a>
