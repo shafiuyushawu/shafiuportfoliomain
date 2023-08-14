@@ -1,4 +1,4 @@
-import moviegallery from '../../../assets/Projects/moviegallery.png';
+import moviegallery from '../../../assets/Projects/webp/moviegallery.webp';
 
 const MovieGallery = () => {
   const SCREEN_CONSTANTS = {
@@ -28,7 +28,7 @@ const MovieGallery = () => {
           <img src={moviegallery} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Movie Gallery</h3>
+          <h2 className="project-heading">Movie Gallery</h2>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}

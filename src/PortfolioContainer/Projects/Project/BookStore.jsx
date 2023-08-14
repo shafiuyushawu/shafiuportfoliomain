@@ -1,4 +1,4 @@
-import bookstore from '../../../assets/Projects/bookstore.png';
+import bookstore from '../../../assets/Projects/webp/bookstore.webp';
 
 const BookStore = () => {
   const SCREEN_CONSTANTS = {
@@ -28,7 +28,7 @@ const BookStore = () => {
           <img src={bookstore} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">BookStore</h3>
+          <h2 className="project-heading">BookStore</h2>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}

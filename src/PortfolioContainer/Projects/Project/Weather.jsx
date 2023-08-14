@@ -1,4 +1,4 @@
-import weather from '../../../assets/Projects/weatherf.png';
+import weather from '../../../assets/Projects/webp/weatherf.webp';
 
 const Weather = () => {
   const SCREEN_CONSTANTS = {
@@ -28,7 +28,7 @@ const Weather = () => {
           <img src={weather} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Weather</h3>
+          <h2 className="project-heading">Weather</h2>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}

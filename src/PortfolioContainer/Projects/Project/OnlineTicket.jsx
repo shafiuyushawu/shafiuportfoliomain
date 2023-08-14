@@ -1,4 +1,4 @@
-import onlineticket from '../../../assets/Projects/onlineticket.png';
+import onlineticket from '../../../assets/Projects/webp/onlineticket.webp';
 
 const Weather = () => {
   const SCREEN_CONSTANTS = {
@@ -29,7 +29,7 @@ const Weather = () => {
           <img src={onlineticket} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Online Tickets</h3>
+          <h2 className="project-heading">Online Tickets</h2>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}

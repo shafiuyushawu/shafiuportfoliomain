@@ -1,4 +1,4 @@
-import space from '../../../assets/Projects/space-x.png';
+import space from '../../../assets/Projects/webp/space-x.webp';
 
 const SpaceX = () => {
   const SCREEN_CONSTANTS = {
@@ -28,7 +28,7 @@ const SpaceX = () => {
           <img src={space} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Space Travelers</h3>
+          <h2 className="project-heading">Space Travelers</h2>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
