@@ -41,7 +41,7 @@ const RecipeApp = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/recipe-app">
+            <a href="https://github.com/shafiuyushawu/recipe-app" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -49,7 +49,7 @@ const RecipeApp = () => {
                 See Source  📝
               </button>
             </a>
-            <button disabled type="button" className="btn highlighted-btn">
+            <button disabled type="button" className="btn highlighted-btn" target="_blank" rel="noopener noreferrer">
               Live, Soon!
             </button>
           </div>

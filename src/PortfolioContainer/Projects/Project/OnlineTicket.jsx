@@ -42,7 +42,7 @@ const Weather = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/Online-Ticket">
+            <a href="https://github.com/shafiuyushawu/Online-Ticket" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -50,7 +50,7 @@ const Weather = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://shafiuyushawu.github.io/Online-Ticket/">
+            <a href="https://shafiuyushawu.github.io/Online-Ticket/" target="_blank" rel="noopener noreferrer">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>

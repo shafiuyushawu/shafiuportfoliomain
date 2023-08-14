@@ -22,19 +22,19 @@ const ContactMe = () => (
               }}
             />
           </h2>
-          <a href="https://github.com/shafiuyushawu">
+          <a href="https://github.com/shafiuyushawu" target="_blank" rel="noopener noreferrer">
             <FaGithub className="icon" />
           </a>
-          <a href="https://www.linkedin.com/in/shafiuyushawu">
+          <a href="https://www.linkedin.com/in/shafiuyushawu" target="_blank" rel="noopener noreferrer">
             <FaLinkedinIn className="icon" />
           </a>
-          <a href="https://twitter.com/shafiuyushawu">
+          <a href="https://twitter.com/shafiuyushawu" target="_blank" rel="noopener noreferrer">
             <FaTwitter className="icon" />
           </a>
-          <a href="https://medium.com/@shafiuyushawu">
+          <a href="https://medium.com/@shafiuyushawu" target="_blank" rel="noopener noreferrer">
             <SiMedium className="icon" />
           </a>
-          <a href="https://wellfound.com/u/shafiuyushawu">
+          <a href="https://wellfound.com/u/shafiuyushawu" target="_blank" rel="noopener noreferrer">
             <FaAngellist className="icon" />
           </a>
         </div>

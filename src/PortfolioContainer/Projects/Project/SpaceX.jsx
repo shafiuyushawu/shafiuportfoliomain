@@ -41,7 +41,7 @@ const SpaceX = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/space-travelers">
+            <a href="https://github.com/shafiuyushawu/space-travelers" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -49,7 +49,7 @@ const SpaceX = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://space-travelers-hub-kcp2.onrender.com/">
+            <a href="https://space-travelers-hub-kcp2.onrender.com/" target="_blank" rel="noopener noreferrer">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>

@@ -41,7 +41,7 @@ const MovieGallery = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/movie-gallery">
+            <a href="https://github.com/shafiuyushawu/movie-gallery" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -49,7 +49,7 @@ const MovieGallery = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://maov19.github.io/javascript-capstone/dist/">
+            <a href="https://maov19.github.io/javascript-capstone/dist/" target="_blank" rel="noopener noreferrer">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>

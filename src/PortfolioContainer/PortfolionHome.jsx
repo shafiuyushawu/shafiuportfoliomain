@@ -6,13 +6,15 @@ import Resume from './Resume/Resume';
 import Testimonial from './Testimonial/Testimonial';
 import Projects from './Projects/Projects';
 import ContactMe from './ContactMe/ContactMe';
+import Navbar from './Home/Header/Navbar';
 
 const PortfolionHome = () => (
   <div>
+    <Navbar />
     <Home />
+    <Projects />
     <AboutMe />
     <Resume />
-    <Projects />
     <Testimonial />
     <ContactMe />
     <Link to="home" smooth duration={500} className="move_home">

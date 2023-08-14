@@ -28,7 +28,7 @@ const BudgetApp = () => {
           <img src={budget} alt="no internet" />
         </div>
         <div className="projects-me-details">
-          <h3 className="project-heading">Movie Gallery</h3>
+          <h3 className="project-heading">Budget</h3>
           <span className="projects-me-description">
             <div className="highlight-heading">
               {SCREEN_CONSTANTS.description}
@@ -41,7 +41,7 @@ const BudgetApp = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/budget-app">
+            <a href="https://github.com/shafiuyushawu/budget-app" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -49,7 +49,7 @@ const BudgetApp = () => {
                 See Source  📝
               </button>
             </a>
-            <a href="https://budget-app-03mn.onrender.com/">
+            <a href="https://budget-app-03mn.onrender.com/" target="_blank" rel="noopener noreferrer">
               <button type="button" className="btn highlighted-btn">
                 Live Demo  🚀
               </button>

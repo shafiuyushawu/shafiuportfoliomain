@@ -43,7 +43,7 @@ const BookingCar = () => {
             {renderHighlight()}
           </div>
           <div className="projects-me-options">
-            <a href="https://github.com/shafiuyushawu/book_vehicle_rental-frontend">
+            <a href="https://github.com/shafiuyushawu/book_vehicle_rental-frontend" target="_blank" rel="noopener noreferrer">
               <button
                 type="button"
                 className="btn primary-btn"
@@ -51,7 +51,7 @@ const BookingCar = () => {
                 See Source  📝
               </button>
             </a>
-            <button disabled type="button" className="btn highlighted-btn">
+            <button disabled type="button" className="btn highlighted-btn" target="_blank" rel="noopener noreferrer">
               Live, Soon!
             </button>
           </div>

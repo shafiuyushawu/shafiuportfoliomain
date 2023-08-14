@@ -3,24 +3,46 @@ import ResumeHeading from '../ResumeHeading/ResumeHeading';
 export const resumeBullets = [
   { id: 0, label: 'Education', logoSrc: 'education.svg' },
   { id: 1, label: 'Work History', logoSrc: 'work-history.svg' },
-  { id: 2, label: 'Programming Skills', logoSrc: 'programming-skills.svg' },
-  { id: 3, label: 'Projects', logoSrc: 'projects.svg' },
-  { id: 4, label: 'Interests', logoSrc: 'interests.svg' },
+  { id: 2, label: 'Skills (Front End and Testing)', logoSrc: 'programming-skills.svg' },
+  { id: 3, label: 'Skills (Back End and Testing)', logoSrc: 'programming-skills.svg' },
+  { id: 4, label: 'Skills (Tools and Professional)', logoSrc: 'programming-skills.svg' },
+  { id: 5, label: 'Interests', logoSrc: 'interests.svg' },
 ];
 
-const programmingSkillsDetails = [
-  { id: 1, skill: 'JavaScript', ratingPercentage: 90 },
-  { id: 2, skill: 'React JS', ratingPercentage: 93 },
-  { id: 3, skill: 'React Native', ratingPercentage: 65 },
-  { id: 4, skill: 'Ruby', ratingPercentage: 91 },
-  { id: 5, skill: 'Ruby on Rails', ratingPercentage: 40 },
-  { id: 6, skill: 'Python', ratingPercentage: 80 },
-  { id: 7, skill: 'Express JS', ratingPercentage: 40 },
-  { id: 8, skill: 'Node JS', ratingPercentage: 30 },
-  { id: 9, skill: 'Mongo Db', ratingPercentage: 20 },
-  { id: 10, skill: 'Tailwind CSS & Daisy UI', ratingPercentage: 95 },
-  { id: 11, skill: 'HTML', ratingPercentage: 97 },
-  { id: 12, skill: 'CSS', ratingPercentage: 95 },
+const frontend = [
+  { id: 1, skill: 'HTML', ratingPercentage: 90 },
+  { id: 2, skill: 'CSS3', ratingPercentage: 93 },
+  { id: 3, skill: 'JavaScript', ratingPercentage: 90 },
+  { id: 4, skill: 'React', ratingPercentage: 91 },
+  { id: 5, skill: 'React Native', ratingPercentage: 70 },
+  { id: 6, skill: 'Redux', ratingPercentage: 95 },
+  { id: 7, skill: 'Bootstrap', ratingPercentage: 90 },
+  { id: 8, skill: 'TailwindCSS', ratingPercentage: 90 },
+  { id: 9, skill: 'Jest Test', ratingPercentage: 80 },
+];
+
+const backend = [
+  { id: 1, skill: 'Ruby on Rails', ratingPercentage: 90 },
+  { id: 2, skill: 'Laravel', ratingPercentage: 93 },
+  { id: 3, skill: 'MySQL', ratingPercentage: 90 },
+  { id: 4, skill: 'PostgreSQL', ratingPercentage: 91 },
+  { id: 5, skill: 'Ruby', ratingPercentage: 95 },
+  { id: 6, skill: 'RSpec', ratingPercentage: 70 },
+  { id: 7, skill: 'Capybara', ratingPercentage: 90 },
+  { id: 8, skill: 'Selenium', ratingPercentage: 90 },
+  { id: 9, skill: 'TDD', ratingPercentage: 90 },
+];
+
+const tools = [
+  { id: 1, skill: 'Git', ratingPercentage: 90 },
+  { id: 2, skill: 'GitHub', ratingPercentage: 93 },
+  { id: 3, skill: 'Mobile/Responsive Dev', ratingPercentage: 90 },
+  { id: 4, skill: 'Dev Tools', ratingPercentage: 91 },
+  { id: 5, skill: 'Remote Pair-Programming', ratingPercentage: 95 },
+  { id: 6, skill: 'Teamwork', ratingPercentage: 70 },
+  { id: 7, skill: 'Code Review', ratingPercentage: 90 },
+  { id: 8, skill: 'Mentoring', ratingPercentage: 90 },
+  { id: 9, skill: 'Communication', ratingPercentage: 90 },
 ];
 
 export const projectsDetails = [
@@ -120,18 +142,18 @@ export const resumeDetails = [
     </div>
   </div>,
 
-  /* PROGRAMMING SKILLS */
+  /* TECHNICAL SKILLS */
   <div
     className="resume-screen-container programming-skills-container"
     key="programming-skills"
   >
-    {programmingSkillsDetails.map((skill) => (
-      <div className="skill-parent" key={skill.id}>
+    {frontend.map((front) => (
+      <div className="skill-parent" key={front.id}>
         <div className="heading-bullet" />
-        <span>{skill.skill}</span>
+        <span>{front.skill}</span>
         <div className="skill-percentage">
           <div
-            style={{ width: `${skill.ratingPercentage}%` }}
+            style={{ width: `${front.ratingPercentage}%` }}
             className="active-percentage-bar"
           />
         </div>
@@ -139,23 +161,59 @@ export const resumeDetails = [
     ))}
   </div>,
 
-  /* PROJECTS */
-  <div className="resume-screen-container" key="projects">
-    {projectsDetails.map((projectsDetails) => (
-      <>
-        <ResumeHeading
-          key={projectsDetails.id}
-          heading={projectsDetails.title}
-          subHeading={projectsDetails.subHeading}
-          description={projectsDetails.description}
-          fromDate={projectsDetails.duration.fromDate}
-          toDate={projectsDetails.duration.toDate}
-          link={projectsDetails.link}
-          live={projectsDetails.live}
-        />
-      </>
+  <div
+    className="resume-screen-container programming-skills-container"
+    key="programming-skills"
+  >
+    {backend.map((back) => (
+      <div className="skill-parent" key={back.id}>
+        <div className="heading-bullet" />
+        <span>{back.skill}</span>
+        <div className="skill-percentage">
+          <div
+            style={{ width: `${back.ratingPercentage}%` }}
+            className="active-percentage-bar"
+          />
+        </div>
+      </div>
     ))}
   </div>,
+
+  <div
+    className="resume-screen-container programming-skills-container"
+    key="programming-skills"
+  >
+    {tools.map((tool) => (
+      <div className="skill-parent" key={tool.id}>
+        <div className="heading-bullet" />
+        <span>{tool.skill}</span>
+        <div className="skill-percentage">
+          <div
+            style={{ width: `${tool.ratingPercentage}%` }}
+            className="active-percentage-bar"
+          />
+        </div>
+      </div>
+    ))}
+  </div>,
+
+  // /* PROJECTS */
+  // <div className="resume-screen-container" key="projects">
+  //   {projectsDetails.map((projectsDetails) => (
+  //     <>
+  //       <ResumeHeading
+  //         key={projectsDetails.id}
+  //         heading={projectsDetails.title}
+  //         subHeading={projectsDetails.subHeading}
+  //         description={projectsDetails.description}
+  //         fromDate={projectsDetails.duration.fromDate}
+  //         toDate={projectsDetails.duration.toDate}
+  //         link={projectsDetails.link}
+  //         live={projectsDetails.live}
+  //       />
+  //     </>
+  //   ))}
+  // </div>,
 
   /* Interests */
   <div className="resume-screen-container" key="interests">
