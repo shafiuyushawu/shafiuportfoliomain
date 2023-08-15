@@ -25,7 +25,7 @@ const SpaceX = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={space} alt="no internet" width="70%" height="70%" />
+          <img src={space} alt="no internet" />
         </div>
         <div className="projects-me-details">
           <h2 className="project-heading">Space Travelers</h2>

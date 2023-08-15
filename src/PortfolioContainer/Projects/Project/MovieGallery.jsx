@@ -25,7 +25,7 @@ const MovieGallery = () => {
     <>
       <div className="projects-me-card">
         <div className="projects-profile">
-          <img src={moviegallery} alt="no internet" width="70%" height="70%" />
+          <img src={moviegallery} alt="no internet" />
         </div>
         <div className="projects-me-details">
           <h2 className="project-heading">Movie Gallery</h2>

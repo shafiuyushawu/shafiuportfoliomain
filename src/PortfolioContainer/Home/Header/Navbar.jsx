@@ -15,9 +15,9 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="navbar">
-        <div className="home_icon">
+        <Link to="home" smooth duration={500} className="home_icon">
           <h1>SHAFIU ~ </h1>
-        </div>
+        </Link>
         <button type="button" className="nav_icon" onClick={handleToggle}>
           {toggle ? (
             <MdClose className="icon_m" />
@@ -33,6 +33,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link to="projects" smooth duration={500}>
+                Projects
+              </Link>
+            </li>
+            <li>
               <Link to="aboutme" smooth duration={500}>
                 About Me
               </Link>
@@ -40,11 +45,6 @@ const Navbar = () => {
             <li>
               <Link to="resume" smooth duration={500}>
                 Resume
-              </Link>
-            </li>
-            <li>
-              <Link to="projects" smooth duration={500}>
-                Projects
               </Link>
             </li>
             <li>
